@@ -1,4 +1,4 @@
-# AXE wallet generator _alpha_
+# AXE WALLET GENERTOR _alpha_
 ```
 /__      ___ (  /     
 \\--`-'-|`---\\ | 
