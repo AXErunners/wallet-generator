@@ -9,4 +9,4 @@
 
 # [Start](https://axerunners.github.io/axe-wallet-generator)
 
-this generator is based on WalletGenerator.net https://github.com/MichaelMure/WalletGenerator.net
+based on https://github.com/MichaelMure/WalletGenerator.net
