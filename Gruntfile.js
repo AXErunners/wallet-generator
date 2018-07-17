@@ -7,7 +7,7 @@ module.exports = function (grunt) {
     combine: {
       single: {
         input: "./src/bitaddress-ui.html",
-        output: "./wallet.axerunners.com.html",
+        output: "./index.html",
         tokens: [
           { token: "//biginteger.js", file: "./src/biginteger.js" },
           { token: "//bitcoinjs-lib.js", file: "./src/bitcoinjs-lib.js" },
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
           eol: 'lf'
         },
         files: {                // Files to process
-          './wallet.axerunners.com.html': ['./wallet.axerunners.com.html']
+          './index.html': ['./index.html']
         }
       }
     },
@@ -74,8 +74,8 @@ module.exports = function (grunt) {
     assetenc: {
       pathToAssets: 'src/images',
       rootAlias: 'images',
-      dst: './wallet.axerunners.com.html',
-      template: './wallet.axerunners.com.html',
+      dst: './index.html',
+      template: './index.html',
     },
 
   });

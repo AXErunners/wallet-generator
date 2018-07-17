@@ -62,10 +62,10 @@ END USER NOTES:
 
 Notice of Copyrights and Licenses:
 ---------------------------------------
-The wallet.axerunners.com project, software and embedded resources are
+The wallet-generator project, software and embedded resources are
 copyright The AXE Developers.
 
-The wallet.axerunners.com name, AXE name and logo are not part of the open source
+The wallet-generator name, AXE name and logo are not part of the open source
 license.
 
 The bitaddress.org project, software and embedded resources are

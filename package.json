@@ -1,5 +1,5 @@
 {
-  "name": "wallet.axerunners.com",
+  "name": "wallet-generator",
   "version": "3.4.0-axe",
   "sha256sum": "1ac77db8240abab03fab4a7faa620e35f4090ccc74f4da46bb0ef8c64435ac90",
   "description": "Open Source JavaScript Client-Side AXE Wallet Generator",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/axerunners/wallet.axerunners.com"
+    "url": "git://github.com/axerunners/wallet-generator"
   },
   "keywords": [
     "axe address wallet generator"
@@ -31,6 +31,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/axerunners/wallet.axerunners.com/issues"
+    "url": "https://github.com/axerunners/wallet-generator/issues"
   }
 }
