@@ -1,0 +1,36 @@
+{
+  "name": "wallet.axerunners.com",
+  "version": "3.4.0-axe",
+  "sha256sum": "1ac77db8240abab03fab4a7faa620e35f4090ccc74f4da46bb0ef8c64435ac90",
+  "description": "Open Source JavaScript Client-Side AXE Wallet Generator",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-combine": "~0.8.3",
+    "grunt-encode-asset-base64": "0.0.3",
+    "grunt-lineending": "~0.2.4"
+  },
+  "scripts": {
+    "build": "grunt",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/axerunners/wallet.axerunners.com"
+  },
+  "keywords": [
+    "axe address wallet generator"
+  ],
+  "author": "axe",
+  "contributors": [
+    {
+      "name": "pointbiz"
+    }
+  ],
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/axerunners/wallet.axerunners.com/issues"
+  }
+}
