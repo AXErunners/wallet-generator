@@ -1,4 +1,4 @@
-# AXE WALLET GENERATOR _v1.0.0_
+# AXE WALLET GENERATOR
 ```
 /__      ___ (  /     
 \\--`-'-|`---\\ |
