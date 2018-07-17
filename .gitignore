@@ -6,3 +6,4 @@ node_modules
 /packages
 /packages.config
 /.nuget
+.DS_Store
