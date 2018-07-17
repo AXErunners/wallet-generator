@@ -1,0 +1,603 @@
+﻿<!doctype html>
+<html>
+<head>
+	<!--
+	Donation Address: 1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
+
+	Notice of Copyrights and Licenses:
+	***********************************
+	The wallet.axerunners.com project, software and embedded resources are copyright The AXE Developers.
+
+	The wallet.axerunners.com, AXE name and logo are not part of the open source license.
+
+	The bitaddress.org project, software and embedded resources are copyright bitaddress.org (pointbiz). 
+	The bitaddress.org name and logo are not part of the open source license.
+
+	Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others. 
+	The individual copyrights are included throughout the document along with their licenses.
+	Included JavaScript libraries are separated with HTML script tags.
+
+	Summary of JavaScript functions with a redistributable license:
+	JavaScript function		License
+	*******************		***************
+	window.Crypto			BSD License
+	window.SecureRandom		BSD License
+	window.EllipticCurve		BSD License
+	window.BigInteger		BSD License
+	window.QRCode			MIT License
+	window.Bitcoin			MIT License
+	window.Crypto_scrypt		MIT License
+
+	The bitaddress.org software is available under The MIT License (MIT)
+	Copyright (c) 2011-2016 bitaddress.org (pointbiz)
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
+	associated documentation files (the "Software"), to deal in the Software without restriction, including 
+	without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
+	sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject 
+	to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all copies or substantial 
+	portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT 
+	LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	GitHub Repository: https://github.com/pointbiz/bitaddress.org
+	GitHub Repository: https://github.com/axerunners/wallet.axerunners.com
+	-->
+
+	<title>wallet.axerunners.com</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+//cryptojs.js	
+	</script>
+	<script type="text/javascript">
+//cryptojs.sha256.js	
+	</script>
+	<script type="text/javascript">
+//cryptojs.pbkdf2.js 
+	</script>
+	<script type="text/javascript">
+//cryptojs.hmac.js
+	</script>
+	<script type="text/javascript">
+//cryptojs.aes.js
+	</script>
+	<script type="text/javascript">
+//cryptojs.blockmodes.js
+	</script>
+	<script type="text/javascript">
+//cryptojs.ripemd160.js
+	</script>
+	<script type="text/javascript">
+//securerandom.js
+	</script>
+	<script type="text/javascript">
+//ellipticcurve.js
+	</script>
+	<script type="text/javascript">
+//secrets.js
+	</script>
+	<script type="text/javascript">
+//biginteger.js
+	</script>
+	<script type="text/javascript">
+//qrcode.js
+	</script>
+	<script type="text/javascript">
+//bitcoinjs-lib.js
+	</script>
+	<script type="text/javascript">
+//bitcoinjs-lib.base58.js
+	</script>
+	<script type="text/javascript">
+//bitcoinjs-lib.address.js
+	</script>
+	<script type="text/javascript">
+//bitcoinjs-lib.ecdsa.js
+	</script>
+	<script type="text/javascript">
+//bitcoinjs-lib.eckey.js
+	</script>
+	<script type="text/javascript">
+//bitcoinjs-lib.util.js
+	</script>
+	<script type="text/javascript">
+//crypto-scrypt.js
+	</script>
+	<style type="text/css">
+//main.css
+	</style>
+</head>
+<body onclick="SecureRandom.seedTime();" onmousemove="ninja.seeder.seed(event);">
+	<div id="busyblock"></div>
+	<div id="main">
+		<div id="culturemenu">
+            <div class="culturemenurow">
+                <span><a href="?culture=en" id="cultureen" class="selected" onclick="ninja.translator.translate('en'); return false;">English</a></span> |
+                <span><a href="?culture=es" id="culturees" onclick="ninja.translator.translate('es'); return false;">Español</a></span> |
+                <span><a href="?culture=fr" id="culturefr" onclick="ninja.translator.translate('fr'); return false;">Français</a></span> |
+                <span><a href="?culture=el" id="cultureel" onclick="ninja.translator.translate('el'); return false;">ελληνικά</a></span> |
+                <span><a href="?culture=it" id="cultureit" onclick="ninja.translator.translate('it'); return false;">italiano</a></span> |
+                <span><a href="?culture=de" id="culturede" onclick="ninja.translator.translate('de'); return false;">Deutsch</a></span>
+            </div>
+            <div class="culturemenurow">
+                <span><a href="?culture=cs" id="culturecs" onclick="ninja.translator.translate('cs'); return false;">Česky</a></span> |
+                <span><a href="?culture=hu" id="culturehu" onclick="ninja.translator.translate('hu'); return false;">Magyar</a></span> |
+                <span><a href="?culture=jp" id="culturejp" onclick="ninja.translator.translate('jp'); return false;">日本語</a></span> |
+                <span><a href="?culture=zh-cn" id="culturezh-cn" onclick="ninja.translator.translate('zh-cn'); return false;">简体中文</a></span> |
+                <span><a href="?culture=ru" id="cultureru" onclick="ninja.translator.translate('ru'); return false;">Русский</a></span> |
+                <span><a href="?culture=pt-br" id="culturept-br" onclick="ninja.translator.translate('pt-br'); return false;">português</a></span>
+            </div>
+		</div>
+		<img alt="wallet.axerunners.com" title="wallet.axerunners.com" id="logo" src="<%= assets['images/logo'] %>" />
+		<div id="tagline">Open Source JavaScript Client-Side AXE Wallet Generator</div>
+		<div id="seedpoolarea"><textarea rows="16" cols="62" id="seedpool"></textarea></div>
+		<div id="testnet"></div>
+		<ul class="menu" id="menu">
+			<li class="tab" id="singlewallet" onclick="ninja.tab.select(this);">Single Wallet
+			<li class="tab" id="paperwallet" onclick="ninja.tab.select(this);">Paper Wallet
+			<li class="tab" id="bulkwallet" onclick="ninja.tab.select(this);">Bulk Wallet
+			<li class="tab" id="brainwallet" onclick="ninja.tab.select(this);">Brain Wallet
+			<li class="tab" id="vanitywallet" onclick="ninja.tab.select(this);">Vanity Wallet
+			<li class="tab" id="splitwallet" onclick="ninja.tab.select(this);">Split Wallet
+			<li class="tab" id="detailwallet" onclick="ninja.tab.select(this);">Wallet Details
+		</ul>
+		
+		<div id="generate">
+			<span id="generatelabelbitcoinaddress">Generating AXE Address...</span><br />
+			<span id="generatelabelmovemouse">MOVE your mouse around to add some extra randomness... </span><span id="mousemovelimit"></span><br />
+			<span id="generatelabelkeypress">OR type some random characters into this textbox</span> <input type="text" id="generatekeyinput" onkeydown="ninja.seeder.seedKeyPress(event);" /><br />
+			<div id="seedpooldisplay"></div>
+		</div>
+
+		<div id="wallets">
+			<div id="singlearea" class="walletarea">
+				<div class="commands">
+					<div id="singlecommands" class="row">
+						<span><input type="button" id="newaddress" value="Generate New Address" onclick="ninja.wallets.singlewallet.generateNewAddressAndKey();" /></span>
+						<span class="print"><input type="button" name="print" value="Print" id="singleprint" onclick="window.print();" /></span>
+					</div>
+				</div>
+				<div class="body">
+					<div id="keyarea" class="keyarea">
+						<div class="public">
+							<div class="pubaddress">
+								<span class="label" id="singlelabelbitcoinaddress">AXE Address</span>
+							</div>
+							<div id="qrcode_public" class="qrcode_public"></div>
+							<div class="pubaddress">
+								<span class="output" id="btcaddress"></span>
+							</div>
+							<div id="singleshare">SHARE</div>
+						</div>
+						<div class="private">
+							<div class="privwif">
+								<span class="label" id="singlelabelprivatekey">Private Key</span>
+							</div>
+							<div id="qrcode_private" class="qrcode_private"></div>
+							<div class="privwif">
+								<span class="output" id="btcprivwif"></span>
+							</div>
+							<div id="singlesecret">SECRET</div>
+						</div>
+					</div>
+
+					<div id="singlesafety">
+						<p id="singletip1"><b>A AXE wallet</b> is as simple as a single pairing of a AXE address with its corresponding AXE private key. Such a wallet has been generated for you in your web browser and is displayed above.</p>
+						<p id="singletip2"><b>To safeguard this wallet</b> you must print or otherwise record the AXE address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you are familiar with PGP you can download this all-in-one HTML page and check that you have an authentic version from the author of this site by matching the SHA256 hash of this HTML with the SHA256 hash available in the signed version history document linked on the footer of this site. If you leave/refresh the site or press the "Generate New Address" button then a new private key will be generated and the previously displayed private key will not be retrievable.	Your AXE private key should be kept a secret. Whomever you share the private key with has access to spend all the AXE associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.</p>
+						<p id="singletip3"><b>Add funds</b> to this wallet by instructing others to send AXE to your AXE address.</p>
+						<p id="singletip4"><b>Check your balance</b> by going to explorer.axe.org and entering your AXE address.</p>
+						<p id="singletip5"><b>Spend your AXE</b> by importing your private key to the p2p client wallet. Keep in mind when you import your single key to a AXE p2p client and spend funds your key will be bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another AXE address within the p2p client wallet. You must then backup the p2p client wallet and keep it safe as your remaining AXE will be stored there. Satoshi advised that one should never delete a wallet.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="paperarea">
+				<div class="commands">
+					<div id="papercommands" class="row">
+						<span><label id="paperlabelhideart" for="paperart">Hide Art?</label> <input type="checkbox" id="paperart" onchange="ninja.wallets.paperwallet.toggleArt(this);" /></span>
+						<span><label id="paperlabeladdressestogenerate" for="paperlimit">Addresses to generate:</label> <input type="text" id="paperlimit" /></span>
+						<span><input type="button" id="papergenerate" value="Generate" onclick="ninja.wallets.paperwallet.build(document.getElementById('paperlimit').value * 1, document.getElementById('paperlimitperpage').value * 1, !document.getElementById('paperart').checked, document.getElementById('paperpassphrase').value);" /></span>
+						<span class="print"><input type="button" name="print" value="Print" id="paperprint" onclick="window.print();" /></span>
+					</div>
+					<div id="paperadvancedcommands" class="row extra">
+						<span><label id="paperlabelencrypt" for="paperencrypt">BIP38 Encrypt?</label> <input type="checkbox" id="paperencrypt" onchange="ninja.wallets.paperwallet.toggleEncrypt(this);" /></span>
+						<span><label id="paperlabelBIPpassphrase" for="paperpassphrase">Passphrase:</label> <input type="text" id="paperpassphrase" /></span>
+						<span><label id="paperlabeladdressesperpage" for="paperlimitperpage">Addresses per page:</label> <input type="text" id="paperlimitperpage" /></span>
+					</div>
+				</div>
+				<div id="paperkeyarea"></div>
+			</div>
+			
+			<div id="bulkarea" class="walletarea">
+				<div class="commands">
+					<div id="bulkcommands" class="row">
+						<span><label id="bulklabelstartindex" for="bulkstartindex">Start index:</label> <input type="text" id="bulkstartindex" value="1" /></span>
+						<span><label id="bulklabelrowstogenerate" for="bulklimit">Rows to generate:</label> <input type="text" id="bulklimit" value="3" /></span>
+						<span><label id="bulklabelcompressed" for="bulkcompressed">Compressed addresses?</label> <input type="checkbox" id="bulkcompressed" checked="checked" /></span>
+						<span><input type="button" id="bulkgenerate" value="Generate" onclick="ninja.wallets.bulkwallet.buildCSV(document.getElementById('bulklimit').value * 1, document.getElementById('bulkstartindex').value * 1, document.getElementById('bulkcompressed').checked, document.getElementById('bulkpassphrase').value);" /> </span>
+						<span class="print"><input type="button" name="print" id="bulkprint" value="Print" onclick="window.print();" /></span>
+					</div>
+					<div id="bulkadvancedcommands" class="row extra">
+						<span><label id="bulklabelencrypt" for="bulkencrypt">BIP38 Encrypt?</label> <input type="checkbox" id="bulkencrypt" onchange="ninja.wallets.bulkwallet.toggleEncrypt(this);" /></span>
+						<span><label id="bulklabelBIPpassphrase" for="bulkpassphrase">Passphrase:</label> <input type="text" id="bulkpassphrase" /></span>
+					</div>
+				</div>
+				<div class="body">
+					<span class="label" id="bulklabelcsv">Comma Separated Values:</span> <span class="format" id="bulklabelformat">Index,Address,Private Key</span>
+					<textarea rows="20" cols="88" id="bulktextarea"></textarea>
+				</div>
+				<div class="faqs">
+					<div id="bulkfaq1" class="faq"> 
+						<div id="bulkq1" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(1);">
+							<span id="bulklabelq1">Why should I use a Bulk Wallet to accept AXE on my website?</span>
+							<div id="bulke1" class="more"></div>
+						</div>
+						<div id="bulka1" class="answer">The traditional approach to accepting AXE on your website requires that you install the official AXE client daemon ("axed"). Many website hosting packages don't support installing the AXE daemon. Also, running the AXE daemon on your web server means your private keys are hosted on the server and could get stolen if your web server is hacked. When using a Bulk Wallet you can upload only the AXE addresses and not the private keys to your web server. Then you don't have to worry about your AXE wallet being stolen if your web server is hacked. </div>
+					</div>
+					<div id="bulkfaq2" class="faq"> 
+						<div id="bulkq2" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(2);">
+							<span id="bulklabelq2">How do I use a Bulk Wallet to accept AXE on my website?</span>
+							<div id="bulke2" class="more"></div>
+						</div>
+						<div id="bulka2" class="answer">
+							<ol>
+							<li id="bulklabela2li1">Use the Bulk Wallet tab to pre-generate a large number of AXE addresses (10,000+). Copy and paste the generated comma separated values (CSV) list to a secure text file on your computer. Backup the file you just created to a secure location.</li>
+							<li id="bulklabela2li2">Import the AXE addresses into a database table on your web server. (Don't put the wallet/private keys on your web server, otherwise you risk hackers stealing your coins. Just the AXE addresses as they will be shown to customers.)</li>
+							<li id="bulklabela2li3">Provide an option on your website's shopping cart for your customer to pay in AXE. When the customer chooses to pay in AXE you will then display one of the addresses from your database to the customer as his "payment address" and save it with his shopping cart order.</li>
+							<li id="bulklabela2li4">You now need to be notified when the payment arrives. Google "AXE payment notification" and subscribe to at least one AXE payment notification service. There are various services that will notify you via Web Services, API, SMS, Email, etc. Once you receive this notification, which could be programmatically automated, you can process the customer's order. To manually check if a payment has arrived you can use Block Explorer. Replace THEADDRESSGOESHERE with the AXE address you are checking. It could take between 10 minutes to one hour for the transaction to be confirmed.<br />http://explorer.axe.org/address/THEADDRESSGOESHERE<br /><br />Unconfirmed transactions can be viewed at: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br />You should see the transaction there within 30 seconds.</li>
+							<li id="bulklabela2li5">AXE will safely pile up on the block chain. Use the original wallet file you generated in step 1 to spend them.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="brainarea" class="walletarea">
+				<div id="braincommands" class="commands">
+					<div class="row">
+						<span id="brainlabelenterpassphrase" class="label"><label for="brainpassphrase">Enter Passphrase: </label></span>
+						<input tabindex="1" type="password" id="brainpassphrase" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.brainwallet.view();" />
+						<span><label id="brainlabelshow" for="brainpassphraseshow">Show?</label> <input type="checkbox" id="brainpassphraseshow" onchange="ninja.wallets.brainwallet.showToggle(this);" /></span>
+						<span class="print"><input type="button" name="print" id="brainprint" value="Print" onclick="window.print();" /></span>
+					</div>
+					<div class="row extra">
+						<span class="label" id="brainlabelconfirm"><label for="brainpassphraseconfirm">Confirm Passphrase: </label></span>
+						<input tabindex="2" type="password" id="brainpassphraseconfirm" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.brainwallet.view();" />
+						
+						<span id="brainalgorithm" class="notes right">Algorithm: SHA256(passphrase)</span>
+					</div>
+					<div class ="row extra">
+						<span><label tabindex="3" id="brainlabelcompressed" for="braincompressed">Compressed address?</label> <input type="checkbox" id="braincompressed" /></span>
+						<span><input tabindex="4" type="button" id="brainview" value="View" onclick="ninja.wallets.brainwallet.view();" /></span>
+					</div>
+					<div class="row extra"><span id="brainwarning"></span></div>
+				</div>
+				<div id="brainkeyarea" class="keyarea">
+					<div class="public">
+						<div id="brainqrcodepublic" class="qrcode_public"></div>
+						<div class="pubaddress">
+							<span class="label" id="brainlabelbitcoinaddress">AXE Address:</span>
+							<span class="output" id="brainbtcaddress"></span>
+						</div>
+					</div>
+					<div class="private">
+						<div id="brainqrcodeprivate" class="qrcode_private"></div>
+						<div class="privwif">
+							<span class="label" id="brainlabelprivatekey">Private Key (Wallet Import Format):</span>
+							<span class="output" id="brainbtcprivwif"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="vanityarea" class="walletarea">
+				<div id="vanitystep1label" class="commands expandable" onclick="ninja.wallets.vanitywallet.openCloseStep(1);">
+					<span><label id="vanitylabelstep1">Step 1 - Generate your "Step1 Key Pair"</label> <input type="button" id="vanitynewkeypair" 
+						value="Generate" onclick="ninja.wallets.vanitywallet.generateKeyPair();" /></span>
+					<div id="vanitystep1icon" class="more"></div>
+				</div>
+				<div id="vanitystep1area">
+					<div>
+						<span class="label" id="vanitylabelstep1publickey">Step 1 Public Key:</span>
+						<div class="output pubkeyhex" id="vanitypubkey"></div>
+						<br /><div class="notes" id="vanitylabelstep1pubnotes">Copy and paste the above into the Your-Part-Public-Key field in the Vanity Pool Website.</div>
+					</div>
+					<div>
+						<span class="label" id="vanitylabelstep1privatekey">Step 1 Private Key:</span>
+						<span class="output" id="vanityprivatekey"></span>
+						<br /><div class="notes" id="vanitylabelstep1privnotes">Copy and paste the above Private Key field into a text file. Ideally save to an encrypted drive. You will need this to retrieve the AXE Private Key once the Pool has found your prefix.</div>
+					</div>
+				</div>
+				<div id="vanitystep2label" class="expandable" onclick="ninja.wallets.vanitywallet.openCloseStep(2);">
+					<span id="vanitylabelstep2calculateyourvanitywallet">Step 2 - Calculate your Vanity Wallet</span>
+					<div id="vanitystep2icon" class="more"></div>
+				</div>
+				<div id="vanitystep2inputs">
+					<div>
+						<span id="vanitylabelenteryourpart">Enter Your Part Private Key (generated in Step 1 above and previously saved):</span>
+						<br /><span class="notes" id="vanitylabelnote1">[NOTE: this input box can accept a public key or private key]</span>
+					</div>
+					<div><textarea id="vanityinput1" rows="2" cols="90" onfocus="this.select();"></textarea></div>
+					<div>
+						<span id="vanitylabelenteryourpoolpart">Enter Pool Part Private Key (from Vanity Pool):</span>
+						<br /><span class="notes" id="vanitylabelnote2">[NOTE: this input box can accept a public key or private key]</span>
+					</div>
+					<div><textarea id="vanityinput2" rows="2" cols="90" onfocus="this.select();"></textarea></div>
+					<div>
+						<label for="vanityradioadd" id="vanitylabelradioadd">Add</label> <input type="radio" id="vanityradioadd" name="vanityradio" value="add" checked />
+						<label for="vanityradiomultiply" id="vanitylabelradiomultiply">Multiply</label> <input type="radio" id="vanityradiomultiply" name="vanityradio" value="multiply" />
+					</div>
+					<div><input type="button" id="vanitycalc" value="Calculate Vanity Wallet" onclick="ninja.wallets.vanitywallet.addKeys();" /></div>
+				</div>
+				<div id="vanitystep2area">
+					<div>
+						<span class="label" id="vanitylabelbitcoinaddress">Vanity AXE Address:</span>
+						<span class="output" id="vanityaddress"></span>
+						<br /><div class="notes" id="vanitylabelnotesbitcoinaddress">The above is your new address that should include your required prefix.</div>
+					</div>
+					
+					<div>
+						<span class="label" id="vanitylabelpublickeyhex">Vanity Public Key (HEX):</span>
+						<span class="output pubkeyhex" id="vanitypublickeyhex"></span>
+						<br /><div class="notes" id="vanitylabelnotespublickeyhex">The above is the Public Key in hexadecimal format. </div>
+					</div>
+
+					<div>
+						<span class="label" id="vanitylabelprivatekey">Vanity Private Key (WIF):</span>
+						<span class="output" id="vanityprivatekeywif"></span>
+						<br /><div class="notes" id="vanitylabelnotesprivatekey">The above is the Private Key to load into your wallet. </div>
+					</div>
+				</div>
+			</div>
+
+			<div id="splitarea" class="walletarea">
+				<div id="splitcommands" class="commands " >
+					<label id="splitlabelthreshold">Minimum share threshold needed to combine</label>
+					<input type="text" id="splitthreshold" value="2" size="4"/>
+					<br/>
+					<label id="splitlabelshares">Number of shares</label>
+					<input type="text" id="splitshares" value="3" size="4"/>
+					<span><input type="button" id="splitview" value="Generate" onclick="ninja.wallets.splitwallet.splitKey();"></span>
+					<div id="splitstep1icon" class="more " onclick="ninja.wallets.splitwallet.openCloseStep(1);"></div>
+				</div>
+				<div id="splitstep1area"></div>
+
+				<div id="combinecommands" class="left commands">
+					<span>
+						<label id="combinelabelentershares">Enter Available Shares (whitespace separated)</label><br/>
+						<textarea id="combineinput" cols="60" rows="10"></textarea><br/>
+					</span>
+					<span><input type="button" id="combineview" value="Combine Shares" onclick="ninja.wallets.splitwallet.combineShares();"></span>
+				</div>
+				<div id="splitstep2area">
+					<div id="combineoutput">
+						<label id="combinelabelprivatekey">Combined Private Key</label>
+						<div id="combinedprivatekey" class="output"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="detailarea" class="walletarea">	
+				<div id="detailcommands" class="commands">
+					<span><label id="detaillabelenterprivatekey" for="detailprivkey">Enter Private Key</label></span>
+					<input type="text" id="detailprivkey" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();" />
+					<span><input type="button" class="button" id="detailview" value="View Details" onclick="ninja.wallets.detailwallet.viewDetails();" /></span>
+					
+					<div id="detailbip38toggle">
+						<span><label id="detaillabelencrypt" for="detailencrypt">BIP38 Encrypt?</label> <input type="checkbox" id="detailbip38checkbox" onchange="ninja.wallets.detailwallet.toggleEncrypt(this);" /></span>
+					</div>
+					<div id="detailbip38commands">
+						<span><label id="detaillabelpassphrase">Enter BIP38 Passphrase</label> <input type="text" id="detailprivkeypassphrase" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.detailwallet.enterOnPassphrase();" /></span>
+						<span id="detailbip38decryptspan"><input type="button" class="button" id="detailbip38decryptbutton" value="Decrypt BIP38" onclick="ninja.wallets.detailwallet.decryptBip38();" /></span>
+						<span id="detailbip38encryptspan"><input type="button" class="button" id="detailbip38encryptbutton" value="Encrypt BIP38" onclick="ninja.wallets.detailwallet.encryptBip38();" /></span>
+					</div>
+					<span class="print"><input type="button" class="button" name="print" id="detailprint" value="Print" onclick="window.print();" /></span>
+					<div class="row extra">
+						<span><label id="detailkeyformats">Key Formats: WIF, WIFC, HEX, B64, B6, MINI, BIP38</label></span>
+					</div>
+				</div>
+				<div id="detailkeyarea">
+					<div class="notes">
+						<span id="detaillabelnote1">Your AXE Private Key is a unique secret number that only you know. It can be encoded in a number of different formats. Below we show the AXE Address and Public Key that corresponds to your Private Key as well as your Private Key in the most popular encoding formats (WIF, WIFC, HEX, B64).</span>
+						<br /><br />
+						<span id="detaillabelnote2">AXE stores public keys in compressed format. The client now also supports import and export of private keys with importprivkey/dumpprivkey. The format of the exported private key is determined by whether the address was generated in an old or new wallet.</span>
+					</div>
+					<div class="pubqr">
+						<div class="item">
+							<span class="label" id="detaillabelbitcoinaddress">AXE Address</span>
+							<div id="detailqrcodepublic" class="qrcode_public"></div>
+							<span class="output" id="detailaddress"></span>
+						</div>					
+						<div class="item right">
+							<span class="label" id="detaillabelbitcoinaddresscomp">AXE Address Compressed</span>
+							<div id="detailqrcodepubliccomp" class="qrcode_public"></div>
+							<span class="output" id="detailaddresscomp"></span>
+						</div>
+					</div>
+					<br /><br />
+					<div class="item clear">
+						<span class="label" id="detaillabelpublickey">Public Key (130 characters [0-9A-F]):</span>
+						<span class="output pubkeyhex" id="detailpubkey"></span>
+					</div>
+					<div class="item">
+						<span class="label" id="detaillabelpublickeycomp">Public Key (compressed, 66 characters [0-9A-F]):</span>
+						<span class="output" id="detailpubkeycomp"></span>
+					</div>
+					<hr />
+					<div class="privqr">
+						<div class="item">
+							<span class="label"><span id="detaillabelprivwif">Private Key WIF<br />51 characters base58, starts with a</span> <span id="detailwifprefix">'7'</span></span>
+							<div id="detailqrcodeprivate" class="qrcode_private"></div>
+							<span class="output" id="detailprivwif"></span>
+						</div>
+						<div class="item right">
+							<span class="label"><span id="detaillabelprivwifcomp">Private Key WIF Compressed<br />52 characters base58, starts with a</span> <span id="detailcompwifprefix">'X'</span></span>
+							<div id="detailqrcodeprivatecomp" class="qrcode_private"></div>
+							<span class="output" id="detailprivwifcomp"></span>
+						</div>
+					</div>
+					<br /><br />
+					<div class="item clear">
+						<span class="label" id="detaillabelprivhex">Private Key Hexadecimal Format (64 characters [0-9A-F]):</span>
+						<span class="output" id="detailprivhex"></span>
+					</div>
+					<div class="item">
+						<span class="label" id="detaillabelprivb64">Private Key Base64 (44 characters):</span>
+						<span class="output" id="detailprivb64"></span>
+					</div>
+					<div class="item" style="display: none;" id="detailmini">
+						<span class="label" id="detaillabelprivmini">Private Key Mini Format (22, 26 or 30 characters, starts with an 'S'):</span>
+						<span class="output" id="detailprivmini"></span>
+					</div>
+					<div class="item" style="display: none;" id="detailb6">
+						<span class="label" id="detaillabelprivb6">Private Key Base6 Format (99 characters [0-5]):</span>
+						<span class="output" id="detailprivb6"></span>
+					</div>
+					<div class="item" style="display: none;" id="detailbip38">
+						<span class="label" id="detaillabelprivbip38">Private Key BIP38 Format (58 characters base58, starts with '6P'):</span>
+						<div id="detailqrcodeprivatebip38" class="qrcode_private"></div>
+						<span class="output" id="detailprivbip38"></span>
+					</div>
+				</div>
+				<div class="faqs">
+					<div id="detailfaq1" class="faq"> 
+						<div id="detailq1" class="question" onclick="ninja.wallets.detailwallet.openCloseFaq(1);">
+							<span id="detaillabelq1">How do I make a wallet using dice? What is B6?</span>
+							<div id="detaile1" class="more"></div>
+						</div>
+						<div id="detaila1" class="answer">An important part of creating a AXE wallet is ensuring the random numbers used to create the wallet are truly random. Physical randomness is better than computer generated pseudo-randomness. The easiest way to generate physical randomness is with dice. To create a AXE private key you only need one six sided die which you roll 99 times. Stopping each time to record the value of the die. When recording the values follow these rules: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. By doing this you are recording the big random number, your private key, in B6 or base 6 format. You can then enter the 99 character base 6 private key into the text field above and click View Details. You will then see the AXE address associated with your private key. You should also make note of your private key in WIF format since it is more widely used.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="footer" class="footer">
+			<div class="tooltips">
+				<div class="tooltip" id="statuscryptogood">
+					<span class="statusgood" id="statuslabelcryptogood">&#10004; Good!</span>
+					<span id="statuslabelcryptogood1">Your browser can generate cryptographically random keys using window.crypto.getRandomValues</span>
+					<br /><br /><input type="button" value="OK" class="button" id="statusokcryptogood" onclick="document.getElementById('statuscryptogood').style.display = 'none';" />
+				</div>
+				<div class="tooltip" id="statuscryptobad">
+					<span class="statusbad" id="statuslabelcryptobad">&times; Oh no!</span>
+					<span id="statuslabelcryptobad1">Your browser does NOT support window.crypto.getRandomValues. You should use a more modern browser with this generator to increase the security of the keys generated.</span>
+					<br /><br /><input type="button" value="OK" class="button" id="statusokcryptobad" onclick="document.getElementById('statuscryptobad').style.display = 'none';" />
+				</div>
+				<div class="tooltip" id="statusunittestsgood">
+					<span class="statusgood" id="statuslabelunittestsgood">&#10004; Good!</span>
+					<span id="statuslabelunittestsgood1">All synchronous unit tests passed.</span>
+					<br /><br /><input type="button" value="OK" class="button" id="statusokunittestsgood" onclick="document.getElementById('statusunittestsgood').style.display = 'none';" />
+				</div>
+				<div class="tooltip" id="statusunittestsbad">
+					<span class="statusbad" id="statuslabelunittestsbad">&times; Oh no!</span>
+					<span id="statuslabelunittestsbad1">Some synchronous unit tests DID NOT pass. You should find another browser to use with this generator.</span>
+					<br /><br /><input type="button" value="OK" class="button" id="statusokunittestsbad" onclick="document.getElementById('statusunittestsbad').style.display = 'none';" />
+				</div>
+				<div class="tooltip" id="statusprotocolgood">
+					<span class="statusgood" id="statuslabelprotocolgood">&#10004; Good!</span>
+					<span id="statuslabelprotocolgood1">You are running this generator from your local computer. <br />Tip: Double check you are offline by trying </span>
+					<a href="http://www.google.com" target="_blank">www.google.com</a>
+					<br /><br /><input type="button" value="OK" class="button" id="statusokprotocolgood" onclick="document.getElementById('statusprotocolgood').style.display = 'none';" />
+				</div>
+				<div class="tooltip" id="statusprotocolbad">
+					<span class="statuswarn" id="statuslabelprotocolbad">&#9888; Think twice!</span>
+					<span id="statuslabelprotocolbad1">You appear to be running this generator online from a live website. For valuable wallets it is recommended to</span>
+					<a id="statuslabelprotocolbad2" href="https://github.com/axerunners/wallet.axerunners.com/archive/v//version.zip">download</a>
+					<span id="statuslabelprotocolbad3">the zip file from GitHub and run this generator offline as a local html file.</span>
+					<br /><br /><input type="button" value="OK" class="button" id="statusokprotocolbad" onclick="document.getElementById('statusprotocolbad').style.display = 'none';" />
+				</div>
+				<div class="tooltip" id="statuskeypoolgood">
+					<span id="statuslabelkeypool1">This is a log of all the AXE Addresses and Private Keys you generated during your current session. Reloading the page will create a new session.</span>
+					<textarea rows="20" cols="102" id="keypooltextarea"></textarea>
+					
+					<br /><br />
+					<input type="button" value="Refresh" class="button" id="statuskeypoolrefresh" onclick="ninja.status.showKeyPool();" />
+					<input type="button" value="OK" class="button" id="statusokkeypool" onclick="document.getElementById('statuskeypoolgood').style.display = 'none';" />
+				</div>
+			</div>
+
+			<div class="authorbtc">
+				<div>
+					<span class="item">
+						<span class="statusicon" id="statusprotocol" onclick="ninja.status.showProtocol();">...</span>
+						<span class="statusicon" id="statuscrypto" onclick="ninja.status.showCrypto();">...</span>
+						<span class="statusicon" id="statusunittests" onclick="ninja.status.showUnitTests();">...</span>
+						<span class="statusicon" id="statuskeypool" onclick="ninja.status.showKeyPool();">&#8803;</span>
+					</span>
+					<span class="item"><span id="footerlabeldonations">Donations for original project:</span> <b>1NiNja</b>1bUmhSoTXozBRBEtR8LeF9TGbZBN</span>
+					<span class="item" id="footerlabeltranslatedby"></span>
+					<span class="item"><a href="https://github.com/axerunners/wallet.axerunners.com" target="_blank" id="footerlabelgithub">GitHub Repository</a> 
+						(<a href="https://github.com/axerunners/wallet.axerunners.com/archive/v//version.zip" target="_blank" id="footerlabelgithubzip">zip</a>)</span>
+				</div>
+			</div>
+			<div class="copyright">
+				<span id="footerlabelcopyright1">Copyright bitaddress.org, The AXE Developers.</span>
+				<span id="footerlabelcopyright2">JavaScript copyrights are included in the source.</span>
+				<span id="footerlabelnowarranty">No warranty.</span>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+//ninja.key.js
+	</script>
+	<script type="text/javascript">
+//ninja.seeder.js
+	</script>
+	<script type="text/javascript">
+ //ninja.qrcode.js
+	</script>
+	<script type="text/javascript">
+//ninja.misc.js
+	</script>
+	<script type="text/javascript">
+//ninja.translator.js
+//cs.js
+//de.js
+//el.js
+//es.js
+//fr.js
+//hu.js
+//it.js
+//jp.js
+//pt-br.js
+//ru.js
+//zh-cn.js
+	</script>
+	<script type="text/javascript">
+//ninja.singlewallet.js
+	</script>
+	<script type="text/javascript">
+//ninja.paperwallet.js
+	</script>
+	<script type="text/javascript">
+//ninja.bulkwallet.js
+	</script>
+	<script type="text/javascript">
+//ninja.brainwallet.js
+	</script>
+	<script type="text/javascript">
+//ninja.vanitywallet.js
+	</script>
+	<script type="text/javascript">
+//ninja.detailwallet.js
+	</script>
+	<script type="text/javascript">
+//ninja.splitwallet.js
+	</script>
+	<script type="text/javascript">
+//ninja.unittests.js
+	</script>
+	<script type="text/javascript">
+//ninja.onload.js
+	</script>
+</body>
+</html>
