@@ -1,7 +1,7 @@
 {
   "name": "wallet.axerunners.com",
   "version": "3.4.0-axe",
-  "sha256sum": "4f5254b4a6791c8d277bed6ea3d7928e1721a8068dffda9441b5c6bb4bfb7006",
+  "sha256sum": "1ac77db8240abab03fab4a7faa620e35f4090ccc74f4da46bb0ef8c64435ac90",
   "description": "Open Source JavaScript Client-Side AXE Wallet Generator",
   "main": "Gruntfile.js",
   "devDependencies": {
