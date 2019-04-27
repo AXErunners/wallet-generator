@@ -10,10 +10,10 @@
 
 	The wallet-generator, AXE name and logo are not part of the open source license.
 
-	The bitaddress.org project, software and embedded resources are copyright bitaddress.org (pointbiz). 
+	The bitaddress.org project, software and embedded resources are copyright bitaddress.org (pointbiz).
 	The bitaddress.org name and logo are not part of the open source license.
 
-	Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others. 
+	Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others.
 	The individual copyrights are included throughout the document along with their licenses.
 	Included JavaScript libraries are separated with HTML script tags.
 
@@ -31,19 +31,19 @@
 	The bitaddress.org software is available under The MIT License (MIT)
 	Copyright (c) 2011-2016 bitaddress.org (pointbiz)
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
-	associated documentation files (the "Software"), to deal in the Software without restriction, including 
-	without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
-	sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject 
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+	associated documentation files (the "Software"), to deal in the Software without restriction, including
+	without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+	sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject
 	to the following conditions:
 
-	The above copyright notice and this permission notice shall be included in all copies or substantial 
+	The above copyright notice and this permission notice shall be included in all copies or substantial
 	portions of the Software.
 
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT 
-	LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+	LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 	GitHub Repository: https://github.com/pointbiz/bitaddress.org
@@ -202,7 +202,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		};
 
 	})();
-}	
+}
 	</script>
 	<script type="text/javascript">
 /*!
@@ -339,7 +339,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	SHA256._digestsize = 32;
 
-})();	
+})();
 	</script>
 	<script type="text/javascript">
 /*!
@@ -395,7 +395,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	};
 
-})(); 
+})();
 	</script>
 	<script type="text/javascript">
 /*!
@@ -547,7 +547,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			// Allow mode to override options
 			if (mode.fixOptions) mode.fixOptions(options);
 
-			var 
+			var
 
 			// Convert to bytes if message is a string
 		m = (
@@ -588,7 +588,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			// Allow mode to override options
 			if (mode.fixOptions) mode.fixOptions(options);
 
-			var 
+			var
 
 			// Convert to bytes if ciphertext is a string
 		c = (
@@ -1030,9 +1030,9 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Electronic Code Book mode.
-	* 
+	*
 	* ECB applies the cipher directly against each block of the input.
-	* 
+	*
 	* ECB does not require an initialization vector.
 	*/
 	var ECB = C_mode.ECB = function () {
@@ -1067,7 +1067,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Cipher block chaining
-	* 
+	*
 	* The first block is XORed with the IV. Subsequent blocks are XOR with the
 	* previous cipher output.
 	*/
@@ -1121,11 +1121,11 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Cipher feed back
-	* 
+	*
 	* The cipher output is XORed with the plain text to produce the cipher output,
 	* which is then fed back into the cipher to produce a bit pattern to XOR the
 	* next block with.
-	* 
+	*
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var CFB = C_mode.CFB = function () {
@@ -1173,10 +1173,10 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Output feed back
-	* 
+	*
 	* The cipher repeatedly encrypts its own output. The output is XORed with the
 	* plain text to produce the cipher text.
-	* 
+	*
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var OFB = C_mode.OFB = function () {
@@ -1432,11 +1432,11 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	<script type="text/javascript">
 /*!
 * Random number generator with ArcFour PRNG
-* 
+*
 * NOTE: For best results, put code like
 * <body onclick='SecureRandom.seedTime();' onkeypress='SecureRandom.seedTime();'>
 * in your main HTML document.
-* 
+*
 * Copyright Tom Wu, bitaddress.org  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
@@ -1623,7 +1623,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 * Basic Javascript Elliptic Curve implementation
 * Ported loosely from BouncyCastle's Java EC code
 * Only Fp curves implemented for now
-* 
+*
 * Copyright Tom Wu, bitaddress.org  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
@@ -1684,7 +1684,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	/**
 	* return a sqrt root - the routine verifies that the calculation
 	* returns the right value - if none exists it returns null.
-	* 
+	*
 	* Copyright (c) 2000 - 2011 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
 	* Ported to JavaScript by bitaddress.org
 	*/
@@ -1973,7 +1973,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		var len = 32; // integerToBytes will zero pad if integer is less than 32 bytes. 32 bytes length is required by the Bitcoin protocol.
 		var enc = ec.integerToBytes(x, len);
 
-		// when compressed prepend byte depending if y point is even or odd 
+		// when compressed prepend byte depending if y point is even or odd
 		if (compressed) {
 			if (y.isEven()) {
 				enc.unshift(0x02);
@@ -2296,15 +2296,15 @@ var defaults = {
 	radix: 16, // work with HEX by default
 	minBits: 3,
 	maxBits: 20, // this permits 1,048,575 shares, though going this high is NOT recommended in JS!
-	
+
 	bytesPerChar: 2,
 	maxBytesPerChar: 6, // Math.pow(256,7) > Math.pow(2,53)
-		
+
 	// Primitive polynomials (in decimal form) for Galois Fields GF(2^n), for 2 <= n <= 30
 	// The index of each term in the array corresponds to the n for that polynomial
 	// i.e. to get the polynomial for n=16, use primitivePolynomials[16]
 	primitivePolynomials: [null,null,1,3,3,5,3,3,29,17,9,5,83,27,43,3,45,9,39,39,9,5,3,33,27,9,71,39,9,5,83],
-	
+
 	// warning for insecure PRNG
 	warning: 'WARNING:\nA secure random number generator was not found.\nUsing Math.random(), which is NOT cryptographically strong!'
 };
@@ -2324,13 +2324,13 @@ function init(bits){
 	if(bits && (typeof bits !== 'number' || bits%1 !== 0 || bits<defaults.minBits || bits>defaults.maxBits)){
 		throw new Error('Number of bits must be an integer between ' + defaults.minBits + ' and ' + defaults.maxBits + ', inclusive.')
 	}
-	
+
 	config.radix = defaults.radix;
 	config.bits = bits || defaults.bits;
 	config.size = Math.pow(2, config.bits);
 	config.max = config.size - 1;
-	
-	// Construct the exp and log tables for multiplication.	
+
+	// Construct the exp and log tables for multiplication.
 	var logs = [], exps = [], x = 1, primitive = defaults.primitivePolynomials[config.bits];
 	for(var i=0; i<config.size; i++){
 		exps[i] = x;
@@ -2341,7 +2341,7 @@ function init(bits){
 			x &= config.max;
 		}
 	}
-		
+
 	config.logs = logs;
 	config.exps = exps;
 };
@@ -2360,7 +2360,7 @@ function isInited(){
 // which should output a random string of 1's and 0's of length `bits`
 function getRNG(){
 	var randomBits, crypto;
-	
+
 	function construct(bits, arr, radix, size){
 		var str = '',
 			i = 0,
@@ -2376,20 +2376,20 @@ function getRNG(){
 			return str;
 		}
 	}
-	
+
 	// node.js crypto.randomBytes()
 	if(typeof require === 'function' && (crypto=require('crypto')) && (randomBits=crypto['randomBytes'])){
 		return function(bits){
 			var bytes = Math.ceil(bits/8),
 				str = null;
-		
+
 			while( str === null ){
 				str = construct(bits, randomBits(bytes).toString('hex'), 16, 4);
 			}
 			return str;
 		}
 	}
-	
+
 	// browsers with window.crypto.getRandomValues()
 	if(global['crypto'] && typeof global['crypto']['getRandomValues'] === 'function' && typeof global['Uint32Array'] === 'function'){
 		crypto = global['crypto'];
@@ -2402,8 +2402,8 @@ function getRNG(){
 				crypto['getRandomValues'](arr);
 				str = construct(bits, arr, 10, 32);
 			}
-			
-			return str;	
+
+			return str;
 		}
 	}
 
@@ -2411,7 +2411,7 @@ function getRNG(){
 	// Will produce a warning every time it is called.
 	config.unsafePRNG = true;
 	warn();
-	
+
 	var bitsPerNum = 32;
 	var max = Math.pow(2,bitsPerNum)-1;
 	return function(bits){
@@ -2419,7 +2419,7 @@ function getRNG(){
 		var arr = [], str=null;
 		while(str===null){
 			for(var i=0; i<elems; i++){
-				arr[i] = Math.floor(Math.random() * max + 1); 
+				arr[i] = Math.floor(Math.random() * max + 1);
 			}
 			str = construct(bits, arr, 10, bitsPerNum);
 		}
@@ -2444,7 +2444,7 @@ exports.setRNG = function(rng, alert){
 	}
 	config.unsafePRNG=false;
 	rng = rng || getRNG();
-	
+
 	// test the RNG (5 times)
 	if(typeof rng !== 'function' || typeof rng(config.bits) !== 'string' || !parseInt(rng(config.bits),2) || rng(config.bits).length > config.bits || rng(config.bits).length < config.bits){
 		throw new Error("Random number generator is invalid. Supply an RNG of the form function(bits){} that returns a string containing 'bits' number of random 1's and 0's.")
@@ -2452,12 +2452,12 @@ exports.setRNG = function(rng, alert){
 		config.rng = rng;
 	}
 	config.alert = !!alert;
-	
+
 	return !!config.unsafePRNG;
 };
 
 function isSetRNG(){
-	return typeof config.rng === 'function'; 
+	return typeof config.rng === 'function';
 };
 
 // Generates a random bits-length number string using the PRNG
@@ -2466,20 +2466,20 @@ exports.random = function(bits){
 	if(!isSetRNG()){
 		this.setRNG();
 	}
-	
+
 	if(typeof bits !== 'number' || bits%1 !== 0 || bits < 2){
 		throw new Error('Number of bits must be an integer greater than 1.')
 	}
-	
+
 	if(config.unsafePRNG){
 		warn();
 	}
 	return bin2hex(config.rng(bits));
 }
 
-// Divides a `secret` number String str expressed in radix `inputRadix` (optional, default 16) 
-// into `numShares` shares, each expressed in radix `outputRadix` (optional, default to `inputRadix`), 
-// requiring `threshold` number of shares to reconstruct the secret. 
+// Divides a `secret` number String str expressed in radix `inputRadix` (optional, default 16)
+// into `numShares` shares, each expressed in radix `outputRadix` (optional, default to `inputRadix`),
+// requiring `threshold` number of shares to reconstruct the secret.
 // Optionally, zero-pads the secret to a length that is a multiple of padLength before sharing.
 /** @expose **/
 exports.share = function(secret, numShares, threshold, padLength, withoutPrefix){
@@ -2489,9 +2489,9 @@ exports.share = function(secret, numShares, threshold, padLength, withoutPrefix)
 	if(!isSetRNG()){
 		this.setRNG();
 	}
-	
+
 	padLength =  padLength || 0;
-		
+
 	if(typeof secret !== 'string'){
 		throw new Error('Secret must be a string.');
 	}
@@ -2500,7 +2500,7 @@ exports.share = function(secret, numShares, threshold, padLength, withoutPrefix)
 	}
 	if(numShares > config.max){
 		var neededBits = Math.ceil(Math.log(numShares +1)/Math.LN2);
-		throw new Error('Number of shares must be an integer between 2 and 2^bits-1 (' + config.max + '), inclusive. To create ' + numShares + ' shares, use at least ' + neededBits + ' bits.')	
+		throw new Error('Number of shares must be an integer between 2 and 2^bits-1 (' + config.max + '), inclusive. To create ' + numShares + ' shares, use at least ' + neededBits + ' bits.')
 	}
 	if(typeof threshold !== 'number' || threshold%1 !== 0 || threshold < 2){
 		throw new Error('Threshold number of shares must be an integer between 2 and 2^bits-1 (' + config.max + '), inclusive.');
@@ -2512,13 +2512,13 @@ exports.share = function(secret, numShares, threshold, padLength, withoutPrefix)
 	if(typeof padLength !== 'number' || padLength%1 !== 0 ){
 		throw new Error('Zero-pad length must be an integer greater than 1.');
 	}
-	
+
 	if(config.unsafePRNG){
 		warn();
 	}
-	
+
 	secret = '1' + hex2bin(secret); // append a 1 so that we can preserve the correct number of leading zeros in our secret
-	secret = split(secret, padLength);	
+	secret = split(secret, padLength);
 	var x = new Array(numShares), y = new Array(numShares);
 	for(var i=0, len = secret.length; i<len; i++){
 		var subShares = this._getShares(secret[i], numShares, threshold);
@@ -2537,19 +2537,19 @@ exports.share = function(secret, numShares, threshold, padLength, withoutPrefix)
 			x[i] = config.bits.toString(36).toUpperCase() + padLeft(x[i],padding) + bin2hex(y[i]);
 		}
 	}
-	
+
 	return x;
 };
 
-// This is the basic polynomial generation and evaluation function 
+// This is the basic polynomial generation and evaluation function
 // for a `config.bits`-length secret (NOT an arbitrary length)
-// Note: no error-checking at this stage! If `secrets` is NOT 
+// Note: no error-checking at this stage! If `secrets` is NOT
 // a NUMBER less than 2^bits-1, the output will be incorrect!
 /** @expose **/
-exports._getShares = function(secret, numShares, threshold){	
+exports._getShares = function(secret, numShares, threshold){
 	var shares = [];
-	var coeffs = [secret]; 
-		
+	var coeffs = [secret];
+
 	for(var i=1; i<threshold; i++){
 		coeffs[i] = parseInt(config.rng(config.bits),2);
 	}
@@ -2561,16 +2561,16 @@ exports._getShares = function(secret, numShares, threshold){
 	}
 	return shares;
 };
-	
+
 // Polynomial evaluation at `x` using Horner's Method
 // TODO: this can possibly be sped up using other methods
-// NOTE: fx=fx * x + coeff[i] ->  exp(log(fx) + log(x)) + coeff[i], 
+// NOTE: fx=fx * x + coeff[i] ->  exp(log(fx) + log(x)) + coeff[i],
 //       so if fx===0, just set fx to coeff[i] because
 //       using the exp/log form will result in incorrect value
 function horner(x, coeffs){
 	var logx = config.logs[x];
 	var fx = 0;
-	for(var i=coeffs.length-1; i>=0; i--){	
+	for(var i=coeffs.length-1; i>=0; i--){
 		if(fx === 0){
 			fx = coeffs[i];
 			continue;
@@ -2590,15 +2590,15 @@ function inArray(arr,val){
 };
 
 function processShare(share){
-	
+
 	var bits = parseInt(share[0], 36);
 	if(bits && (typeof bits !== 'number' || bits%1 !== 0 || bits<defaults.minBits || bits>defaults.maxBits)){
 		throw new Error('Number of bits must be an integer between ' + defaults.minBits + ' and ' + defaults.maxBits + ', inclusive.')
 	}
-	
+
 	var max = Math.pow(2, bits) - 1;
 	var idLength = max.toString(config.radix).length;
-	
+
 	var id = parseInt(share.substr(1, idLength), config.radix);
 	if(typeof id !== 'number' || id%1 !== 0 || id<1 || id>max){
 		throw new Error('Share id must be an integer between 1 and ' + config.max + ', inclusive.');
@@ -2620,11 +2620,11 @@ exports._processShare = processShare;
 // Protected method that evaluates the Lagrange interpolation
 // polynomial at x=`at` for individual config.bits-length
 // segments of each share in the `shares` Array.
-// Each share is expressed in base `inputRadix`. The output 
+// Each share is expressed in base `inputRadix`. The output
 // is expressed in base `outputRadix'
 function combine(at, shares){
-	var setBits, share, x = [], y = [], result = '', idx;	
-	
+	var setBits, share, x = [], y = [], result = '', idx;
+
 	for(var i=0, len = shares.length; i<len; i++){
 		share = processShare(shares[i]);
 		if(typeof setBits === 'undefined'){
@@ -2632,15 +2632,15 @@ function combine(at, shares){
 		}else if(share['bits'] !== setBits){
 			throw new Error('Mismatched shares: Different bit settings.')
 		}
-		
+
 		if(config.bits !== setBits){
 			init(setBits);
 		}
-		
+
 		if(inArray(x, share['id'])){ // repeated x value?
 			continue;
 		}
-	
+
 		idx = x.push(share['id']) - 1;
 		share = split(hex2bin(share['value']));
 		for(var j=0, len2 = share.length; j<len2; j++){
@@ -2648,7 +2648,7 @@ function combine(at, shares){
 			y[j][idx] = share[j];
 		}
 	}
-	
+
 	for(var i=0, len=y.length; i<len; i++){
 		result = padLeft(lagrange(at, x, y[i]).toString(2)) + result;
 	}
@@ -2672,12 +2672,12 @@ exports.combine = function(shares){
 /** @expose **/
 exports.newShare = function(id, shares){
 	if(typeof id === 'string'){
-		id = parseInt(id, config.radix);	
+		id = parseInt(id, config.radix);
 	}
-	
+
 	var share = processShare(shares[0]);
 	var max = Math.pow(2, share['bits']) - 1;
-	
+
 	if(typeof id !== 'number' || id%1 !== 0 || id<1 || id>max){
 		throw new Error('Share id must be an integer between 1 and ' + config.max + ', inclusive.');
 	}
@@ -2685,30 +2685,30 @@ exports.newShare = function(id, shares){
 	var padding = max.toString(config.radix).length;
 	return config.bits.toString(36).toUpperCase() + padLeft(id.toString(config.radix), padding) + combine(id, shares);
 };
-	
+
 // Evaluate the Lagrange interpolation polynomial at x = `at`
 // using x and y Arrays that are of the same length, with
 // corresponding elements constituting points on the polynomial.
 function lagrange(at, x, y){
 	var sum = 0,
-		product, 
+		product,
 		i, j;
-		
+
 	for(var i=0, len = x.length; i<len; i++){
 		if(!y[i]){
-			continue; 
+			continue;
 		}
-			
+
 		product = config.logs[y[i]];
 		for(var j=0; j<len; j++){
 			if(i === j){ continue; }
 			if(at === x[j]){ // happens when computing a share that is in the list of shares used to compute it
 				product = -1; // fix for a zero product term, after which the sum should be sum^0 = sum, not sum^1
-				break; 
+				break;
 			}
 			product = ( product + config.logs[at ^ x[j]] - config.logs[x[i] ^ x[j]] + config.max/* to make sure it's not negative */ ) % config.max;
 		}
-			
+
 		sum = product === -1 ? sum : sum ^ config.exps[product]; // though exps[-1]= undefined and undefined ^ anything = anything in chrome, this behavior may not hold everywhere, so do the check
 	}
 	return sum;
@@ -2717,10 +2717,10 @@ function lagrange(at, x, y){
 /** @expose **/
 exports._lagrange = lagrange;
 
-// Splits a number string `bits`-length segments, after first 
+// Splits a number string `bits`-length segments, after first
 // optionally zero-padding it to a length that is a multiple of `padLength.
 // Returns array of integers (each less than 2^bits-1), with each element
-// representing a `bits`-length segment of the input string from right to left, 
+// representing a `bits`-length segment of the input string from right to left,
 // i.e. parts[0] represents the right-most `bits`-length segment of the input string.
 function split(str, padLength){
 	if(padLength){
@@ -2729,11 +2729,11 @@ function split(str, padLength){
 	var parts = [];
 	for(var i=str.length; i>config.bits; i-=config.bits){
 		parts.push(parseInt(str.slice(i-config.bits, i), 2));
-	}	
-	parts.push(parseInt(str.slice(0, i), 2));	
+	}
+	parts.push(parseInt(str.slice(0, i), 2));
 	return parts;
 };
-	
+
 // Pads a string `str` with zeros on the left so that its length is a multiple of `bits`
 function padLeft(str, bits){
 	bits = bits || config.bits
@@ -2765,9 +2765,9 @@ function bin2hex(str){
 	}
 	return hex;
 }
-	
-// Converts a given UTF16 character string to the HEX representation. 
-// Each character of the input string is represented by 
+
+// Converts a given UTF16 character string to the HEX representation.
+// Each character of the input string is represented by
 // `bytesPerChar` bytes in the output string.
 /** @expose **/
 exports.str2hex = function(str, bytesPerChar){
@@ -2775,11 +2775,11 @@ exports.str2hex = function(str, bytesPerChar){
 		throw new Error('Input must be a character string.');
 	}
 	bytesPerChar = bytesPerChar || defaults.bytesPerChar;
-	
+
 	if(typeof bytesPerChar !== 'number' || bytesPerChar%1 !== 0 || bytesPerChar<1 || bytesPerChar > defaults.maxBytesPerChar){
 		throw new Error('Bytes per character must be an integer between 1 and ' + defaults.maxBytesPerChar + ', inclusive.')
 	}
-	
+
 	var hexChars = 2*bytesPerChar;
 	var max = Math.pow(16, hexChars) - 1;
 	var out = '', num;
@@ -2796,19 +2796,19 @@ exports.str2hex = function(str, bytesPerChar){
 	}
 	return out;
 };
-	
-// Converts a given HEX number string to a UTF16 character string. 
+
+// Converts a given HEX number string to a UTF16 character string.
 /** @expose **/
 exports.hex2str = function(str, bytesPerChar){
 	if(typeof str !== 'string'){
 		throw new Error('Input must be a hexadecimal string.');
 	}
 	bytesPerChar = bytesPerChar || defaults.bytesPerChar;
-	
+
 	if(typeof bytesPerChar !== 'number' || bytesPerChar%1 !== 0 || bytesPerChar<1 || bytesPerChar > defaults.maxBytesPerChar){
 		throw new Error('Bytes per character must be an integer between 1 and ' + defaults.maxBytesPerChar + ', inclusive.')
 	}
-	
+
 	var hexChars = 2*bytesPerChar;
 	var out = '';
 	str = padLeft(str, hexChars);
@@ -2817,7 +2817,7 @@ exports.hex2str = function(str, bytesPerChar){
 	}
 	return out;
 };
-	
+
 // by default, initialize without an RNG
 exports.init();
 })(typeof module !== 'undefined' && module['exports'] ? module['exports'] : (window['secrets'] = {}), typeof GLOBAL !== 'undefined' ? GLOBAL : window );
@@ -2829,7 +2829,7 @@ exports.init();
 // Review and Testing: https://github.com/cryptocoinjs/bigi/
 /*!
 * Basic JavaScript BN library - subset useful for RSA encryption. v1.4
-* 
+*
 * Copyright (c) 2005  Tom Wu
 * All Rights Reserved.
 * BSD License
@@ -4114,7 +4114,7 @@ exports.init();
 // Licensed under the MIT license:
 //   http://www.opensource.org/licenses/mit-license.php
 //
-// The word "QR Code" is registered trademark of 
+// The word "QR Code" is registered trademark of
 // DENSO WAVE INCORPORATED
 //   http://www.denso-wave.com/qrcode/faqpatent-e.html
 //
@@ -4328,7 +4328,7 @@ exports.init();
 			var data = (this.errorCorrectLevel << 3) | maskPattern;
 			var bits = QRCode.Util.getBCHTypeInfo(data);
 
-			// vertical		
+			// vertical
 			for (var i = 0; i < 15; i++) {
 
 				var mod = (!test && ((bits >> i) & 1) == 1);
@@ -5011,7 +5011,7 @@ exports.init();
 	[2, 35, 17],
 	[2, 35, 13],
 
-	// 4		
+	// 4
 	[1, 100, 80],
 	[2, 50, 32],
 	[2, 50, 24],
@@ -5029,7 +5029,7 @@ exports.init();
 	[4, 43, 19],
 	[4, 43, 15],
 
-	// 7		
+	// 7
 	[2, 98, 78],
 	[4, 49, 31],
 	[2, 32, 14, 4, 33, 15],
@@ -5047,7 +5047,7 @@ exports.init();
 	[4, 36, 16, 4, 37, 17],
 	[4, 36, 12, 4, 37, 13],
 
-	// 10		
+	// 10
 	[2, 86, 68, 2, 87, 69],
 	[4, 69, 43, 1, 70, 44],
 	[6, 43, 19, 2, 44, 20],
@@ -5427,7 +5427,7 @@ Bitcoin.ECDSA = (function () {
 		* Parses a byte array containing a DER-encoded signature.
 		*
 		* This function will return an object of the form:
-		* 
+		*
 		* {
 		*   r: BigInteger,
 		*   s: BigInteger
@@ -5806,7 +5806,7 @@ Bitcoin.ECKey = (function () {
 		return this;
 	};
 
-	// Sipa Private Key Wallet Import Format 
+	// Sipa Private Key Wallet Import Format
 	ECKey.prototype.getBitcoinWalletImportFormat = function () {
 		var bytes = this.getBitcoinPrivateKeyByteArray();
 		if (bytes == null) return "";
@@ -5818,12 +5818,12 @@ Bitcoin.ECKey = (function () {
 		return privWif;
 	};
 
-	// Private Key Hex Format 
+	// Private Key Hex Format
 	ECKey.prototype.getBitcoinHexFormat = function () {
 		return Crypto.util.bytesToHex(this.getBitcoinPrivateKeyByteArray()).toString().toUpperCase();
 	};
 
-	// Private Key Base64 Format 
+	// Private Key Base64 Format
 	ECKey.prototype.getBitcoinBase64Format = function () {
 		return Crypto.util.bytesToBase64(this.getBitcoinPrivateKeyByteArray());
 	};
@@ -5832,7 +5832,7 @@ Bitcoin.ECKey = (function () {
 		if (this.priv == null) return null;
 		// Get a copy of private key as a byte array
 		var bytes = this.priv.toByteArrayUnsigned();
-		// zero pad if private key is less than 32 bytes 
+		// zero pad if private key is less than 32 bytes
 		while (bytes.length < 32) bytes.unshift(0x00);
 		return bytes;
 	};
@@ -6068,17 +6068,17 @@ Bitcoin.Util = {
 	<script type="text/javascript">
 /*
 * Copyright (c) 2010-2011 Intalio Pte, All Rights Reserved
-* 
+*
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
 * in the Software without restriction, including without limitation the rights
 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 * copies of the Software, and to permit persons to whom the Software is
 * furnished to do so, subject to the following conditions:
-* 
+*
 * The above copyright notice and this permission notice shall be included in
 * all copies or substantial portions of the Software.
-* 
+*
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -6098,7 +6098,7 @@ Bitcoin.Util = {
 	* N = Cpu cost
 	* r = Memory cost
 	* p = parallelization cost
-	* 
+	*
 	*/
 	window.Crypto_scrypt = function (passwd, salt, N, r, p, dkLen, callback) {
 		if (N == 0 || (N & (N - 1)) != 0) throw Error("N must be > 0 and a power of 2");
@@ -6370,7 +6370,7 @@ Bitcoin.Util = {
 a { position: relative; z-index: 20; }
 .right { text-align: right; }
 .walletarea { display: none; border: 2px solid #008de4; }
-hr { margin: 20px 0; border-top: 2px axeed #008000; }
+hr { margin: 20px 0; border-top: 2px dashed #008000; }
 .keyarea { height: 110px; text-align: left; position: relative; padding: 5px; }
 .keyarea .public { float: left; }
 .keyarea .pubaddress { display: inline-block; height: 40px; padding: 0 0 0 10px; float: left; }
@@ -6414,16 +6414,16 @@ input[type=checkbox] { position: relative; z-index: 20; }
 
 #main { position: relative; text-align: center; margin: 0px auto; width: 1008px; }
 #logo { width: 578px; height: 80px; }
-		
+
 #paperarea { min-height: 120px; display: none; }
 #paperarea .keyarea { border: 2px solid #008de4; border-top: 0; }
 #paperarea .keyarea.art { display: block; height: auto; border: 0; font-family: Ubuntu, Arial; padding: 0; margin: 0; }
 #paperarea .artwallet .papersvg { width: 486px; height: 261px; border: 0; margin: 0; padding: 0; left: 0; }
-#paperarea .artwallet .qrcode_public { top: 52px; left: 17px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF; 
-		                                padding: 5px 5px 2px 5px; } 
-#paperarea .artwallet .qrcode_private { top: 104px; left: 360px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF; 
+#paperarea .artwallet .qrcode_public { top: 52px; left: 17px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
 		                                padding: 5px 5px 2px 5px; }
-#paperarea .artwallet .btcaddress  
+#paperarea .artwallet .qrcode_private { top: 104px; left: 360px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+		                                padding: 5px 5px 2px 5px; }
+#paperarea .artwallet .btcaddress
 {
 	position: absolute; top: 240px; left: 139px; z-index: 100; font-size: 10px; background-color: transparent;
 	font-weight:bold; color: #000000; margin: 0;
@@ -6432,11 +6432,11 @@ input[type=checkbox] { position: relative; z-index: 20; }
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
 		-o-transform-origin:top left;      -o-transform:rotate(-90deg);
 		transform-origin:top left;         transform:rotate(-90deg);
-} 
-#paperarea .artwallet .btcprivwif  
+}
+#paperarea .artwallet .btcprivwif
 {
 	position: absolute; top: 236px; left: 346px; z-index: 100; font-size: 7px; background-color: transparent;
-	font-weight:bold; color: #000000; margin: 0;  
+	font-weight:bold; color: #000000; margin: 0;
 		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
 		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
@@ -6446,7 +6446,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #paperarea .artwallet .btcencryptedkey
 {
 	position: absolute; top: 174px; left: 332px; z-index: 100; font-size: 8px; background-color: transparent;
-	font-weight:bold; color: #000000; margin: 0;  
+	font-weight:bold; color: #000000; margin: 0;
 		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
 		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
@@ -6463,10 +6463,10 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #detailarea .notes { text-align: left; font-size: 80%; padding: 0 0 20px 0; }
 #detailarea .pubqr .item .label { text-decoration: none; }
 #detailarea .pubqr .item { float: left; margin: 10px 0; position: relative; }
-#detailarea .pubqr .item.right { float: right; position: relative; top: 0; } 
+#detailarea .pubqr .item.right { float: right; position: relative; top: 0; }
 #detailarea .privqr .item .label { text-decoration: none; }
 #detailarea .privqr .item { float: left; margin: 0; position: relative; }
-#detailarea .privqr .item.right { float: right; position: relative; } 
+#detailarea .privqr .item.right { float: right; position: relative; }
 #detailarea .item { margin: 10px 0; position: relative; font-size: 90%; padding: 1px 0; }
 #detailarea .item.clear { clear: both; padding-top: 10px; }
 #detailarea .label { display: block; font-weight: bold; }
@@ -6509,39 +6509,39 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #busyblock.busy { display: block; }
 .hide { display: none; }
 .show { display: block; }
-		
-@media screen 	
+
+@media screen
 {
 	#tagline { margin: 0 0 15px 0; font-style: italic; }
-	.menu  
+	.menu
 	{
 	    text-align: left; margin: 0; padding: 0; display: block;
 	    color: #fff;
 	    background-color: #008de4; /* # 009900 # 53c100 */
 	    border-top-left-radius: 5px; border-top-right-radius: 5px;
 	}
-	.menu .tab 
+	.menu .tab
 	{
 	    position: relative; display: inline-block; border: 0px solid red;
-	    margin: 0; list-style: none; z-index: 110; cursor: pointer; 
+	    margin: 0; list-style: none; z-index: 110; cursor: pointer;
 	    top: 1px; padding: 10px 20px; width: 212px; text-align: center;
 	}
-	.menu .tab.selected  
+	.menu .tab.selected
 	{
-	    cursor: default; 
+	    cursor: default;
 	    color: #000;
-	    background-color: #FFF; margin: 6px 16px; padding: 4px; border-radius: 5px; 
+	    background-color: #FFF; margin: 6px 16px; padding: 4px; border-radius: 5px;
 	}
-	.menu .tab:hover  
+	.menu .tab:hover
 	{
 	    color: #000;
-	    background-color: #FFF; margin: 6px 16px; padding: 4px; border-radius: 5px; 
+	    background-color: #FFF; margin: 6px 16px; padding: 4px; border-radius: 5px;
 	}
 	.menu .tab.selected:hover { color: #000; }
-	
+
     .pagebreak { height: 50px; }
 	.commands { border-bottom: 2px solid #008de4;  padding: 10px 2px; margin-bottom: 0; }
-	.commands .row { padding: 0 0; text-align: left; } 
+	.commands .row { padding: 0 0; text-align: left; }
 	.commands .row.extra { padding-top: 6px; }
 	.commands span { padding: 0 10px; }
 	.commands span.print { float: right; position: relative; z-index: 20; }
@@ -6568,9 +6568,9 @@ input[type=checkbox] { position: relative; z-index: 20; }
 	#detailcommands .button { position: relative; z-index: 20; }
 	#detailbip38encryptspan { display: none; }
 	.paper .commands { border: 2px solid #008de4; }
-	#bulkstartindex, #paperlimit, #paperlimitperpage { width: 35px; } 
+	#bulkstartindex, #paperlimit, #paperlimitperpage { width: 35px; }
 	#bulklimit { width: 45px; }
-			
+
 	.footer { font-size: 90%; clear: both; width: 770px; padding: 10px 0 10px 0; margin: 50px auto auto auto; }
 	.footer div span.item { padding: 10px; }
 	.footer .authorbtc { float: left; width: 470px; }
@@ -6642,7 +6642,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 			<li class="tab" id="splitwallet" onclick="ninja.tab.select(this);">Split Wallet
 			<li class="tab" id="detailwallet" onclick="ninja.tab.select(this);">Wallet Details
 		</ul>
-		
+
 		<div id="generate">
 			<span id="generatelabelbitcoinaddress">Generating AXE Address...</span><br />
 			<span id="generatelabelmovemouse">MOVE your mouse around to add some extra randomness... </span><span id="mousemovelimit"></span><br />
@@ -6686,7 +6686,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 						<p id="singletip1"><b>An AXE wallet</b> is as simple as a single pairing of an AXE address with its corresponding AXE private key. Such a wallet has been generated for you in your web browser and is displayed above.</p>
 						<p id="singletip2"><b>To safeguard this wallet</b> you must print or otherwise record the AXE address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you are familiar with PGP you can download this all-in-one HTML page and check that you have an authentic version from the author of this site by matching the SHA256 hash of this HTML with the SHA256 hash available in the signed version history document linked on the footer of this site. If you leave/refresh the site or press the "Generate New Address" button then a new private key will be generated and the previously displayed private key will not be retrievable.	Your AXE private key should be kept a secret. Whomever you share the private key with has access to spend all the AXE associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.</p>
 						<p id="singletip3"><b>Add funds</b> to this wallet by instructing others to send AXE to your AXE address.</p>
-						<p id="singletip4"><b>Check your balance</b> by going to explorer.axe.org and entering your AXE address.</p>
+						<p id="singletip4"><b>Check your balance</b> by going to insight.axecore.net and entering your AXE address.</p>
 						<p id="singletip5"><b>Spend your AXE</b> by importing your private key to the p2p client wallet. Keep in mind when you import your single key to a AXE p2p client and spend funds your key will be bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another AXE address within the p2p client wallet. You must then backup the p2p client wallet and keep it safe as your remaining AXE will be stored there. Satoshi advised that one should never delete a wallet.</p>
 					</div>
 				</div>
@@ -6708,7 +6708,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 				</div>
 				<div id="paperkeyarea"></div>
 			</div>
-			
+
 			<div id="bulkarea" class="walletarea">
 				<div class="commands">
 					<div id="bulkcommands" class="row">
@@ -6728,14 +6728,14 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					<textarea rows="20" cols="88" id="bulktextarea"></textarea>
 				</div>
 				<div class="faqs">
-					<div id="bulkfaq1" class="faq"> 
+					<div id="bulkfaq1" class="faq">
 						<div id="bulkq1" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(1);">
 							<span id="bulklabelq1">Why should I use a Bulk Wallet to accept AXE on my website?</span>
 							<div id="bulke1" class="more"></div>
 						</div>
 						<div id="bulka1" class="answer">The traditional approach to accepting AXE on your website requires that you install the official AXE client daemon ("axed"). Many website hosting packages don't support installing the AXE daemon. Also, running the AXE daemon on your web server means your private keys are hosted on the server and could get stolen if your web server is hacked. When using a Bulk Wallet you can upload only the AXE addresses and not the private keys to your web server. Then you don't have to worry about your AXE wallet being stolen if your web server is hacked. </div>
 					</div>
-					<div id="bulkfaq2" class="faq"> 
+					<div id="bulkfaq2" class="faq">
 						<div id="bulkq2" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(2);">
 							<span id="bulklabelq2">How do I use a Bulk Wallet to accept AXE on my website?</span>
 							<div id="bulke2" class="more"></div>
@@ -6745,14 +6745,14 @@ input[type=checkbox] { position: relative; z-index: 20; }
 							<li id="bulklabela2li1">Use the Bulk Wallet tab to pre-generate a large number of AXE addresses (10,000+). Copy and paste the generated comma separated values (CSV) list to a secure text file on your computer. Backup the file you just created to a secure location.</li>
 							<li id="bulklabela2li2">Import the AXE addresses into a database table on your web server. (Don't put the wallet/private keys on your web server, otherwise you risk hackers stealing your coins. Just the AXE addresses as they will be shown to customers.)</li>
 							<li id="bulklabela2li3">Provide an option on your website's shopping cart for your customer to pay in AXE. When the customer chooses to pay in AXE you will then display one of the addresses from your database to the customer as his "payment address" and save it with his shopping cart order.</li>
-							<li id="bulklabela2li4">You now need to be notified when the payment arrives. Google "AXE payment notification" and subscribe to at least one AXE payment notification service. There are various services that will notify you via Web Services, API, SMS, Email, etc. Once you receive this notification, which could be programmatically automated, you can process the customer's order. To manually check if a payment has arrived you can use Block Explorer. Replace THEADDRESSGOESHERE with the AXE address you are checking. It could take between 10 minutes to one hour for the transaction to be confirmed.<br />http://explorer.axe.org/address/THEADDRESSGOESHERE<br /><br />Unconfirmed transactions can be viewed at: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br />You should see the transaction there within 30 seconds.</li>
+							<li id="bulklabela2li4">You now need to be notified when the payment arrives. Google "AXE payment notification" and subscribe to at least one AXE payment notification service. There are various services that will notify you via Web Services, API, SMS, Email, etc. Once you receive this notification, which could be programmatically automated, you can process the customer's order. To manually check if a payment has arrived you can use Block Explorer. Replace THEADDRESSGOESHERE with the AXE address you are checking. It could take between 10 minutes to one hour for the transaction to be confirmed.<br />http://insight.axerunners.com/address/THEADDRESSGOESHERE<br /><br />Unconfirmed transactions can be viewed at: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br />You should see the transaction there within 30 seconds.</li>
 							<li id="bulklabela2li5">AXE will safely pile up on the block chain. Use the original wallet file you generated in step 1 to spend them.</li>
 							</ol>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="brainarea" class="walletarea">
 				<div id="braincommands" class="commands">
 					<div class="row">
@@ -6764,7 +6764,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					<div class="row extra">
 						<span class="label" id="brainlabelconfirm"><label for="brainpassphraseconfirm">Confirm Passphrase: </label></span>
 						<input tabindex="2" type="password" id="brainpassphraseconfirm" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.brainwallet.view();" />
-						
+
 						<span id="brainalgorithm" class="notes right">Algorithm: SHA256(passphrase)</span>
 					</div>
 					<div class ="row extra">
@@ -6790,10 +6790,10 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="vanityarea" class="walletarea">
 				<div id="vanitystep1label" class="commands expandable" onclick="ninja.wallets.vanitywallet.openCloseStep(1);">
-					<span><label id="vanitylabelstep1">Step 1 - Generate your "Step1 Key Pair"</label> <input type="button" id="vanitynewkeypair" 
+					<span><label id="vanitylabelstep1">Step 1 - Generate your "Step1 Key Pair"</label> <input type="button" id="vanitynewkeypair"
 						value="Generate" onclick="ninja.wallets.vanitywallet.generateKeyPair();" /></span>
 					<div id="vanitystep1icon" class="more"></div>
 				</div>
@@ -6836,7 +6836,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 						<span class="output" id="vanityaddress"></span>
 						<br /><div class="notes" id="vanitylabelnotesbitcoinaddress">The above is your new address that should include your required prefix.</div>
 					</div>
-					
+
 					<div>
 						<span class="label" id="vanitylabelpublickeyhex">Vanity Public Key (HEX):</span>
 						<span class="output pubkeyhex" id="vanitypublickeyhex"></span>
@@ -6878,12 +6878,12 @@ input[type=checkbox] { position: relative; z-index: 20; }
 				</div>
 			</div>
 
-			<div id="detailarea" class="walletarea">	
+			<div id="detailarea" class="walletarea">
 				<div id="detailcommands" class="commands">
 					<span><label id="detaillabelenterprivatekey" for="detailprivkey">Enter Private Key</label></span>
 					<input type="text" id="detailprivkey" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();" />
 					<span><input type="button" class="button" id="detailview" value="View Details" onclick="ninja.wallets.detailwallet.viewDetails();" /></span>
-					
+
 					<div id="detailbip38toggle">
 						<span><label id="detaillabelencrypt" for="detailencrypt">BIP38 Encrypt?</label> <input type="checkbox" id="detailbip38checkbox" onchange="ninja.wallets.detailwallet.toggleEncrypt(this);" /></span>
 					</div>
@@ -6908,7 +6908,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 							<span class="label" id="detaillabelbitcoinaddress">AXE Address</span>
 							<div id="detailqrcodepublic" class="qrcode_public"></div>
 							<span class="output" id="detailaddress"></span>
-						</div>					
+						</div>
 						<div class="item right">
 							<span class="label" id="detaillabelbitcoinaddresscomp">AXE Address Compressed</span>
 							<div id="detailqrcodepubliccomp" class="qrcode_public"></div>
@@ -6961,7 +6961,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					</div>
 				</div>
 				<div class="faqs">
-					<div id="detailfaq1" class="faq"> 
+					<div id="detailfaq1" class="faq">
 						<div id="detailq1" class="question" onclick="ninja.wallets.detailwallet.openCloseFaq(1);">
 							<span id="detaillabelq1">How do I make a wallet using dice? What is B6?</span>
 							<div id="detaile1" class="more"></div>
@@ -7011,7 +7011,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 				<div class="tooltip" id="statuskeypoolgood">
 					<span id="statuslabelkeypool1">This is a log of all the AXE Addresses and Private Keys you generated during your current session. Reloading the page will create a new session.</span>
 					<textarea rows="20" cols="102" id="keypooltextarea"></textarea>
-					
+
 					<br /><br />
 					<input type="button" value="Refresh" class="button" id="statuskeypoolrefresh" onclick="ninja.status.showKeyPool();" />
 					<input type="button" value="OK" class="button" id="statusokkeypool" onclick="document.getElementById('statuskeypoolgood').style.display = 'none';" />
@@ -7028,7 +7028,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					</span>
 					<span class="item"><span id="footerlabeldonations">Donations for original project:</span> <b>1NiNja</b>1bUmhSoTXozBRBEtR8LeF9TGbZBN</span>
 					<span class="item" id="footerlabeltranslatedby"></span>
-					<span class="item"><a href="https://github.com/axerunners/wallet-generator" target="_blank" id="footerlabelgithub">GitHub Repository</a> 
+					<span class="item"><a href="https://github.com/axerunners/wallet-generator" target="_blank" id="footerlabelgithub">GitHub Repository</a>
 						(<a href="https://github.com/axerunners/wallet-generator/archive/v3.4.0-axe.zip" target="_blank" id="footerlabelgithubzip">zip</a>)</span>
 				</div>
 			</div>
@@ -7096,7 +7096,7 @@ ninja.privateKey = {
 			callback(new Error(ninja.translator.get("detailalertnotvalidprivatekey")));
 			return;
 		}
-		// first byte is always 0x01 
+		// first byte is always 0x01
 		else if (hex[0] != 0x01) {
 			callback(new Error(ninja.translator.get("detailalertnotvalidprivatekey")));
 			return;
@@ -7125,7 +7125,7 @@ ninja.privateKey = {
 				return;
 			}
 		}
-		// second byte for EC-multiplied key 
+		// second byte for EC-multiplied key
 		else if (hex[1] == 0x43) {
 			isECMult = true;
 			isCompPoint = (hex[2] & 0x20) != 0;
@@ -7563,7 +7563,7 @@ ninja.publicKey = {
 		},
 
 		// show QRCodes with canvas
-		// parameter: keyValuePair 
+		// parameter: keyValuePair
 		// example: { "id1": "string1", "id2": "string2"}
 		//		"id1" is the id of a div element where you want a QRCode inserted.
 		//		"string1" is the string you want encoded into the QRCode.
@@ -7660,7 +7660,7 @@ ninja.tab = {
                 document.getElementById(wType).className = "tab";
                 ninja.wallets[wType].close();
             }
-            
+
             // don't open tab if entropy still being collected
             // exceptions: brainwallet detailwallet
             if (ninja.seeder.isStillSeeding == false || walletType == "brainwallet" || walletType == "detailwallet") {
@@ -7961,7 +7961,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>AXE peněženka</b> je jednoduchý pár AXE adresy s přidruženým soukromým klíčem. Taková peněženka byla právě vytvořena ve vašem prohlížeči a zobrazena výše.",
 		"singletip2": "<b>Pro zabezpečení této peněženky</b> musíte tuto AXE adresu a soukromý klíč vytisknout a nebo jinak poznamenat. Je důležité provést zálohu soukromého klíče a jeho uschování na bezpečném místě. Tato webová stránka nemá žádné informace o vašem soukromém klíči. Pokud ovládáte PGP, můžete celou tuto stránku stáhnout v jednom HTML souboru a ověřit její pravost srovnáním SHA256 hashe s podepsaným dokumentem historie verzí. Odkaz naleznete v patičce této stránky. Pokud opustíte či obnovíte tuto stránku nebo kliknete na 'Vytvořit novou adresu' dojde k vygenerování nového soukromého klíče a předtím zobrazený klíč bude ztracen. Váš soukromý klíč musíte uchovat v tajnosti. Každý kdo má tento klíč k dispozici může utratit všechny peníze v této peněžence. Pokud budete peněženku tisknout, uzavřete ji do nepropustného obalu nebo ji zalaminujte. Tím zabráníte jejímu poškození vodou. Chovejte se k této peněžence jako k normálním bankovkám.",
 		"singletip3": "<b>Pro vložení</b> peněz do této peněženky stačí zaslat peníze na AXE adresu.",
-		"singletip4": "<b>Zkontrolovat zůstatek</b> můžete na webové stránce explorer.axe.org po zadání AXE adresy.",
+		"singletip4": "<b>Zkontrolovat zůstatek</b> můžete na webové stránce insight.axecore.net po zadání AXE adresy.",
 		"singletip5": "<b>Utratit AXE</b> můžete pomocí jednoho z P2P AXE klientů naimportováním soukromého klíče. Myslete na to, že importem klíče do klienta se stane součástí jeho peněženky. Pokud převedete někomu peníze, nespotřebovaný zůstatek se zašle na jinou AXE adresu uvedenou v P2P klienta. Tuto novou adresu musíte vyzálohovat a udržovat v bezpečí. Satoshi doporučuje, že by nikdo nikdy neměl mazat peněženku.",
 		"singleshare": "SDÍLEJTE",
 		"singlesecret": "SOUKROMÉ",
@@ -7989,7 +7989,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "Předgenerujte si velké množství AXE adres (10 000+). Okopírujte si CSV seznam do souboru na bezpečné místo ve vašem počítači. Poté jej vyzálohujte na bezpečné místo.",
 		"bulklabela2li2": "Naimportujte AXE adresy do databáze na vašem webovém serveru. Neimportujte soukromé klíče, abyste zabránili krádeži vašich peněz.",
 		"bulklabela2li3": "Umožněte na vaší stránce platbu pomocí AXEu. Stačí vždy zobrazit jednu z vygenerovaných adres a uložit si ji u objednávky.",
-		"bulklabela2li4": "Nyní je již pouze potřeba zařídit notifikace o příchozí transakci. Zadejte do Google \"AXE payment notification\" a využijte jednu z existujících služeb. Existuje jich několik a podporují např. Web Services, API, SMS, Email, apod. Notifikaci můžete zpracovat automaticky. Pro ruční kontrolu, zda peníze přišly, stačí použít Block Explorer. Nahraďte SEMPATŘÍADRESA AXE adresou, kterou chcete zkontrolovat. Potvrzení transkace může trvat od 10 minut do jedné hodiny.<br />http://explorer.axe.org/address/SEMPATŘÍADRESA<br /><br />Nepotvrzené tansakce je možné zkontrolovat na: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br />Většinou se zde zobrazí do 30 sekund.",
+		"bulklabela2li4": "Nyní je již pouze potřeba zařídit notifikace o příchozí transakci. Zadejte do Google \"AXE payment notification\" a využijte jednu z existujících služeb. Existuje jich několik a podporují např. Web Services, API, SMS, Email, apod. Notifikaci můžete zpracovat automaticky. Pro ruční kontrolu, zda peníze přišly, stačí použít Block Explorer. Nahraďte SEMPATŘÍADRESA AXE adresou, kterou chcete zkontrolovat. Potvrzení transkace může trvat od 10 minut do jedné hodiny.<br />http://insight.axerunners.com/address/SEMPATŘÍADRESA<br /><br />Nepotvrzené tansakce je možné zkontrolovat na: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br />Většinou se zde zobrazí do 30 sekund.",
 		"bulklabela2li5": "AXEy budou bezpečně převedeny v řetězci bloků. Pro spotřebování stačí kdykoliv naimportovat soubor vygenerovaný v prvním kroku.",
 
 		// brain wallet html
@@ -8126,7 +8126,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>Ein AXE-Wallet </b>(Geldb&ouml;rse) ist nichts anderes als eine AXE-Adresse (&ouml;ffentlicher Schl&uuml;ssel) und der zu ihr geh&ouml;rende private Schl&uuml;ssel. Oben findest du ein solches, gerade f&uuml;r dich erstelltes Wallet, bestehend aus den beiden Zeichenketten. Die QR-Codes dienen lediglich der Vereinfachung und enthalten kodiert die Adresse bzw. den privaten Schl&uuml;ssel.",
 		"singletip2": "<b>Um dieses Wallet zu sch&uuml;tzen,</b> musst du es entweder ausdrucken oder anderweitig die AXE-Adresse und den privaten Schl&uuml;ssel sichern. Fertige auf jeden Fall eine Kopie des privaten Schl&uuml;ssels an und bewahre sie an einem sicheren Ort auf. Der private Schl&uuml;ssel liegt nur lokal auf deinem Rechner vor und wurde nicht ins Internet &uuml;bertragen. Falls du dich mit PGP auskennst, kannst du dir diese all-in-one HTML-Seite herunterladen. Um zu &uuml;berpr&uuml;fen, ob die heruntergeladene Version authentisch ist, kannst du den SHA256-Hash dieser Seite mit dem SHA256-Hash in der signierten Versionsgeschichte am unteren Ende dieser Seite abgleichen. Wenn du diese Seite verl&auml;sst, sie neul&auml;dst bzw. den \"Neues Wallet erstellen\"-Button dr&uuml;ckst, wird ein neues Wallet erstellt und das vorherige wird nicht mehr abrufbar sein. Du solltest deinen privaten Schl&uuml;ssel geheim halten. Wer den privaten Schl&uuml;ssel hat, kann damit auf alle im Wallet befindlichen AXE zugreifen und sie nach Belieben ausgeben. Behandle dein gedrucktes Wallet wie echtes Geld!",
 		"singletip3": "Du kannst <b>Guthaben</b> zu deinem Wallet <b>hinzuf&uuml;gen</b>, indem du genau wie bei anderen &Uuml;berweisungen AXE an die AXE-Adresse deines Wallets schickst.",
-		"singletip4": "<b>&Uuml;berpr&uuml;fe dein Guthaben,</b> indem du deine AXE-Adresse auf explorer.axe.org eingibst.",
+		"singletip4": "<b>&Uuml;berpr&uuml;fe dein Guthaben,</b> indem du deine AXE-Adresse auf insight.axecore.net eingibst.",
 		"singletip5": "Du kannst deine <b>AXE ausgeben</b> deinen privaten Schl&uuml;ssel in dieses importieren. Beachte dabei aber, dass, sobald du AXE mit dem Programm sendest, dein privater Schl&uuml;ssel mit den anderen privaten Schl&uuml;sseln, die vom Programm bereitgestellt werden, verbunden wird. Bei einer &Uuml;berweisung wird etwas R&uuml;ckgeld an eine der AXE-Adressen des Programms geschickt. Deswegen musst du, um tats&auml;chlich dein gesamtes Guthaben zu sichern, ein Backup vom gesamten Wallet des Programms, das nun auch deinen importierten privaten Schl&uuml;ssel enth&auml;lt, anfertigen. Satoshi r&auml;t, dass man unter keinen Umst&auml;nden ein Wallet l&ouml;schen sollte.",
 		"singleshare": "SHARE", //TODO: please translate
 		"singlesecret": "SECRET", //TODO: please translate
@@ -8154,7 +8154,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "Erstelle mithilfe dieser Seite ganz viele AXE-Adressen (10.000+). Kopiere die CSV-Liste in eine sichere Textdatei auf deinem Computer. Fertige ein Backup dieser Datei an und speichere sie an einem sicheren Ort.",
 		"bulklabela2li2": "Importiere die AXE-Adressen in eine Datenbank auf deinem Server. (Lege nur die AXE-Adressen, nicht aber die privaten Schl&uuml;ssel auf deinem Server ab!)",
 		"bulklabela2li3": "Biete deinen Kunden auf deiner Webseite AXE als Zahlungsm&ouml;glichkeit an. Wenn ein Kunde mit AXE zahlen m&ouml;chte, zeige ihm eine der Adressen aus deiner Datenbank als Zahlungsadresse an und speichere sie mit seiner Bestellung.",
-		"bulklabela2li4": "Jetzt musst du dir den Zahlungseingang best&auml;tigen lassen. Google \"AXE payment notification\" und melde dich bei mindestens einem solchen Anbieter an. Es gibt verschiedene Anbieter, die dich via Web, API, SMS, E-Mail etc. &uuml;ber erfolgte Transaktionen informieren k&ouml;nnen. Sobald du die Eingangsbest&auml;tigung erh&auml;lst, kannst du automatisch die Bestellung abwickeln lassen. Um selber zu schauen, ob eine Zahlung erfolgt ist, kannst du Block Explorer nutzen. Ersetze AXEADRESSE durch die AXE-Adresse, die du pr&uuml;fen m&ouml;chtest. Es dauert von zehn Minuten bis zu einer Stunde, um Transaktionen zu best&auml;tigen. <br />http://explorer.axe.org/address/AXEADRESSE<br /> <br />Unbest&auml;tigte Transaktionen findest du hier: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br /> S&auml;mtliche Transaktionen sollten dort innerhalb von 30 Sekunden auftauchen.",
+		"bulklabela2li4": "Jetzt musst du dir den Zahlungseingang best&auml;tigen lassen. Google \"AXE payment notification\" und melde dich bei mindestens einem solchen Anbieter an. Es gibt verschiedene Anbieter, die dich via Web, API, SMS, E-Mail etc. &uuml;ber erfolgte Transaktionen informieren k&ouml;nnen. Sobald du die Eingangsbest&auml;tigung erh&auml;lst, kannst du automatisch die Bestellung abwickeln lassen. Um selber zu schauen, ob eine Zahlung erfolgt ist, kannst du Block Explorer nutzen. Ersetze AXEADRESSE durch die AXE-Adresse, die du pr&uuml;fen m&ouml;chtest. Es dauert von zehn Minuten bis zu einer Stunde, um Transaktionen zu best&auml;tigen. <br />http://insight.axerunners.com/address/AXEADRESSE<br /> <br />Unbest&auml;tigte Transaktionen findest du hier: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br /> S&auml;mtliche Transaktionen sollten dort innerhalb von 30 Sekunden auftauchen.",
 		"bulklabela2li5": "Deine AXE werden sicher in die Block-Chain aufgenommen. Mithilfe des urspr&uuml;nglichen Wallets vom ersten Schritt kannst du sie ausgeben.",
 
 		// brain wallet html
@@ -8291,7 +8291,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>An AXE wallet</b> is as simple as a single pairing of an AXE address with it's corresponding AXE private key. Such a wallet has been generated for you in your web browser and is displayed above.", //TODO: please translate
 		"singletip2": "<b>To safeguard this wallet</b> you must print or otherwise record the AXE address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you are familiar with PGP you can download this all-in-one HTML page and check that you have an authentic version from the author of this site by matching the SHA256 hash of this HTML with the SHA256 hash available in the signed version history document linked on the footer of this site. If you leave/refresh the site or press the Generate New Address button then a new private key will be generated and the previously displayed private key will not be retrievable.	Your AXE private key should be kept a secret. Whomever you share the private key with has access to spend all the AXE associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.", //TODO: please translate
 		"singletip3": "<b>Add funds</b> to this wallet by instructing others to send AXE to your AXE address.", //TODO: please translate
-		"singletip4": "<b>Check your balance</b> by going to explorer.axe.org and entering your AXE address.", //TODO: please translate
+		"singletip4": "<b>Check your balance</b> by going to insight.axecore.net and entering your AXE address.", //TODO: please translate
 		"singletip5": "<b>Spend your AXE</b> by importing your private key to the p2p client wallet. Keep in mind when you import your single key to a AXE p2p client and spend funds your key will be bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another AXE address within the p2p client wallet. You must then backup the p2p client wallet and keep it safe as your remaining AXE will be stored there. Satoshi advised that one should never delete a wallet.", //TODO: please translate
 		"singleshare": "SHARE", //TODO: please translate
 		"singlesecret": "SECRET", //TODO: please translate
@@ -8456,7 +8456,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>An AXE wallet</b> is as simple as a single pairing of an AXE address with it's corresponding AXE private key. Such a wallet has been generated for you in your web browser and is displayed above.", //TODO: please translate
 		"singletip2": "<b>To safeguard this wallet</b> you must print or otherwise record the AXE address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you are familiar with PGP you can download this all-in-one HTML page and check that you have an authentic version from the author of this site by matching the SHA256 hash of this HTML with the SHA256 hash available in the signed version history document linked on the footer of this site. If you leave/refresh the site or press the Generate New Address button then a new private key will be generated and the previously displayed private key will not be retrievable.	Your AXE private key should be kept a secret. Whomever you share the private key with has access to spend all the AXE associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.", //TODO: please translate
 		"singletip3": "<b>Add funds</b> to this wallet by instructing others to send AXE to your AXE address.", //TODO: please translate
-		"singletip4": "<b>Check your balance</b> by going to explorer.axe.org and entering your AXE address.", //TODO: please translate
+		"singletip4": "<b>Check your balance</b> by going to insight.axecore.net and entering your AXE address.", //TODO: please translate
 		"singletip5": "<b>Spend your AXE</b> by importing your private key to the p2p client wallet. Keep in mind when you import your single key to a AXE p2p client and spend funds your key will be bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another AXE address within the p2p client wallet. You must then backup the p2p client wallet and keep it safe as your remaining AXE will be stored there. Satoshi advised that one should never delete a wallet.", //TODO: please translate
 		"singleshare": "SHARE", //TODO: please translate
 		"singlesecret": "SECRET", //TODO: please translate
@@ -8484,7 +8484,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "Usa el tab \"Direcciones en masa\" para generar por anticipado muchas direcciones (más de 10000). Copia y pega la lista de valores separados por comas (CSV) a un archivo de texto seguro (cifrado) en tu ordenador. Guarda una copia de seguridad en algún lugar seguro.",
 		"bulklabela2li2": "Importa las direcciones en la base de datos de tu servidor. No subas la cartera ni las claves públicas, o de lo contrario te lo pueden robar. Sube sólo las direcciones, ya que es lo que se va a mostrar a los clientes.",
 		"bulklabela2li3": "Ofrece una alternativa en el carro de la compra de tu web para que los clientes paguen con AXE. Cuando el cliente elija pagar con AXE, les muestras una de las direcciones de la base de datos como su \"dirección de pago\" y guardas esto junto con el pedido.",
-		"bulklabela2li4": "Ahora te hace falta recibir una notificación del pago. Busca en google \"notificación de pagos AXE\" (o \"AXE payment notification\" en inglés) y suscríbete a alguno de los servicios que aparezcan. Hay varios de ellos, que te pueden notificar vía Web services, API, SMS, email, etc. Una vez te llegue la notificación, lo cual puede ser automatizado, entonces ya puedes procesar el pedido. Para comprobar a mano si has recibido un pago, puedes usar Block Explorer: reemplaza DIRECCION a continuación por la dirección que estés comprobando. La transacción puede tardar entre 10 minutos y una hora en ser confirmada. <br />http://explorer.axe.org/address/DIRECCION<br /><br />Puedes ver las transacciones sin confirmar en: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br />Las transacciones sin confirmar suelen aparecer ahí en unos 30 segundos.",
+		"bulklabela2li4": "Ahora te hace falta recibir una notificación del pago. Busca en google \"notificación de pagos AXE\" (o \"AXE payment notification\" en inglés) y suscríbete a alguno de los servicios que aparezcan. Hay varios de ellos, que te pueden notificar vía Web services, API, SMS, email, etc. Una vez te llegue la notificación, lo cual puede ser automatizado, entonces ya puedes procesar el pedido. Para comprobar a mano si has recibido un pago, puedes usar Block Explorer: reemplaza DIRECCION a continuación por la dirección que estés comprobando. La transacción puede tardar entre 10 minutos y una hora en ser confirmada. <br />http://insight.axerunners.com/address/DIRECCION<br /><br />Puedes ver las transacciones sin confirmar en: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br />Las transacciones sin confirmar suelen aparecer ahí en unos 30 segundos.",
 		"bulklabela2li5": "Las AXE que recibas se almacenarán de forma segura en la cadena de bloques. Usa la cartera original que generaste en el paso 1 para usarlas.",
 
 		// brain wallet html
@@ -8621,7 +8621,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "Un porte-monnaie AXE est aussi simple qu'une paire d'adresses AXE dont une correspond à l'adresse privée AXE. Ce porte-monnaie affiché a été généré pour vous dans votre propre navigateur internet et est donc affiché ci-dessus.",
 		"singletip2": "Pour garder en sécurité ce porte-monnaie, vous devez l'imprimer ou, alternativement, enregistrer l'adresse de réception AXE et la clé privée. Il est important de créer une copie de sauvegarde de la clé privée et de la stocker à un endroit sûr. Ce site n'a aucune base prédéterminée ou de sauvegarde de votre clé privée. Si vous êtes initiés à PGP, vous pouvez télécharger la version toute-en-1 de la page HTML et ainsi vérifier que vous avez une version authentique issue de l'auteur du site en comparant l'encryptage SHA1 de votre page HTML sauvegardée avec l'encryptage SHA1 disponible sur l'historique certifiée indiquée en bas de ce site. Si vous quittez ou rafraichissez ce site ou que vous appuyez sur \"générer une nouvelle adresse\" ... alors une nouvelle clé privée sera générée et la précédente clé privée affichée ne pourra plus être retrouvée. Votre clé privée AXE doit être gardée secrète. Celui qui connaît la clé privée aura la possibilité de vider tous les AXE accumulés et associés à l'adresse de réception. Si vous imprimez le porte-monnaie, pensez à le mettre à l'abri de l'eau dans un sac étanche. Traitez le porte-monnaie papier comme de l'argent en espèces et billets.",
 		"singletip3": "Pour ajouter des fonds à votre porte-monnaie, indiquez d'envoyer les AXE à votre adresse de réception.",
-		"singletip4": "Vérifier le contenu de votre porte-monnaie en consultant explorer.axe.org/address et en y tapant votre adresse de réception AXE.",
+		"singletip4": "Vérifier le contenu de votre porte-monnaie en consultant insight.axecore.net/address et en y tapant votre adresse de réception AXE.",
 		"singletip5": "Pour dépenser vos AXE, en y important votre clé privée dans un porte-monnaie P2P. Gardez à l'esprit que quand vous importez votre clé privée dans le programme P2P AXE et que vous dépensez vos fonds, votre clé privée sera intégrée avec d'autres clés privées dans le porte-monnaie P2P. Quand vous effectuez une transaction, le changement sera envoyé sur une autre adresse AXE privée à l'intérieur du porte-monnaie P2P. Vous DEVEZ, alors, faire une sauvegarde du porte-monnaie P2P et le garder en sécurité car l'ensemble des AXE restant y sera stocké. Satoshi a averti qu'il ne faudrait jamais supprimer un porte-monnaie.",
 		"singleshare": "PARTAGER",
 		"singlesecret": "SECRET",
@@ -8649,7 +8649,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "Utilisez le Porte-monnaie en vrac pour pré-générer une large quantité d'adresses AXE (10,000+). Copiez collez les données séparées par des virgules (CSV) dans un fichier texte sécurisé dans votre ordinateur. Sauvegardez ce fichier dans un endroit sécurisé.",
 		"bulklabela2li2": "Importez les adresses AXE dans une base de donnée sur votre serveur web. (N'ajoutez pas le porte-monnaie ou les clés privées sur votre serveur web, sinon vous courrez le risque de vous faire voler si votre serveur est compromis. Ajoutez seulement les adresses AXE qui seront visibles à vos visiteurs.)",
 		"bulklabela2li3": "Ajoutez une option dans votre panier en ligne pour que vos clients puissent vous payer en AXE. Quand un client choisi de vous payer en AXE, vous pouvez afficher une des adresses de votre base de donnée comme \"adresse de paiment\" pour votre client et sauvegarder cette adresse avec sa commande.",
-		"bulklabela2li4": "Vous avez maintenant besoin d'être avisé quand le paiement est reçu. Cherchez \"AXE payment notification\" sur Google et inscrivez-vous à un service de notification de paiement AXE. Il y a plusieurs services qui vous avertiront via des services Web, API, SMS, Email, etc. Une fois que vous avez reçu la notification, qui devrait être programmée automatiquement, vous pouvez traiter la commande de votre client. Pour vérifier manuellement si un paiement est arrivé, vous pouvez utiliser Block Explorer. Remplacez ADRESSE par l'adresse AXE que vous souhaitez vérifier. La confirmation de la transaction pourrait prendre de 10 à 60 minutes pour être confirmée.<br />http://explorer.axe.org/address/address/ADRESSE<br /><br />Les transactions non confirmées peuvent être visualisées ici: https://bchain.info/AXE/ or http://insight.axe.siampm.com/ <br />Vous devriez voir la transaction à l'intérieur de 30 secondes.",
+		"bulklabela2li4": "Vous avez maintenant besoin d'être avisé quand le paiement est reçu. Cherchez \"AXE payment notification\" sur Google et inscrivez-vous à un service de notification de paiement AXE. Il y a plusieurs services qui vous avertiront via des services Web, API, SMS, Email, etc. Une fois que vous avez reçu la notification, qui devrait être programmée automatiquement, vous pouvez traiter la commande de votre client. Pour vérifier manuellement si un paiement est arrivé, vous pouvez utiliser Block Explorer. Remplacez ADRESSE par l'adresse AXE que vous souhaitez vérifier. La confirmation de la transaction pourrait prendre de 10 à 60 minutes pour être confirmée.<br />http://insight.axerunners.com/address/address/ADRESSE<br /><br />Les transactions non confirmées peuvent être visualisées ici: https://bchain.info/AXE/ or http://insight.axe.siampm.com/ <br />Vous devriez voir la transaction à l'intérieur de 30 secondes.",
 		"bulklabela2li5": "Les AXE vos s'accumuler de façon sécuritaire dans la chaîne de blocs. Utilisez le porte-monnaie original que vous avez généré à l'étape 1 pour les dépenser.",
 
 		// brain wallet html
@@ -8755,29 +8755,29 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelnowarranty": "Garancia nincs.",
 
 		// status html
-		"statuslabelcryptogood": "&#10004; Helyes!", 
-		"statuslabelcryptogood1": "A böngészője képes kriptográfiai szempontból véletlen kulcsok generálására (a window.crypto.getRandomValues metódus támogatott)", 
-		"statusokcryptogood": "Rendben", 
-		"statuslabelcryptobad": "&times; Ó jaj!", 
+		"statuslabelcryptogood": "&#10004; Helyes!",
+		"statuslabelcryptogood1": "A böngészője képes kriptográfiai szempontból véletlen kulcsok generálására (a window.crypto.getRandomValues metódus támogatott)",
+		"statusokcryptogood": "Rendben",
+		"statuslabelcryptobad": "&times; Ó jaj!",
 		"statuslabelcryptobad1": "Böngészője NEM támogatja a window.crypto.getRandomValues metódust. A metódust támogató, modernebb böngészőt kell használnia, ha növelni szeretné a generált kulcsok biztonsági szintjét!",
-		"statusokcryptobad": "Rendben", 
-		"statuslabelunittestsgood": "&#10004; Helyes!", 
-		"statuslabelunittestsgood1": "Minden szinkron unit-teszt sikeres.", 
-		"statusokunittestsgood": "Rendben", 
-		"statuslabelunittestsbad": "&times; Ó, jaj!", 
-		"statuslabelunittestsbad1": "Néhány szinkron unit-teszt NEM volt sikeres. Jobb, ha egy másik böngészőt használ ehhez a generátorhoz!", 
-		"statusokunittestsbad": "Rendben", 
-		"statuslabelprotocolgood": "&#10004; Helyes!", 
-		"statuslabelprotocolgood1": "Ezt a generátort a helyi gépről futtatja. <br />Tipp: Győzdjön meg róla, hogy nem kapcsolódik a hálózatra: ", 
-		"statusokprotocolgood": "Rendben", 
+		"statusokcryptobad": "Rendben",
+		"statuslabelunittestsgood": "&#10004; Helyes!",
+		"statuslabelunittestsgood1": "Minden szinkron unit-teszt sikeres.",
+		"statusokunittestsgood": "Rendben",
+		"statuslabelunittestsbad": "&times; Ó, jaj!",
+		"statuslabelunittestsbad1": "Néhány szinkron unit-teszt NEM volt sikeres. Jobb, ha egy másik böngészőt használ ehhez a generátorhoz!",
+		"statusokunittestsbad": "Rendben",
+		"statuslabelprotocolgood": "&#10004; Helyes!",
+		"statuslabelprotocolgood1": "Ezt a generátort a helyi gépről futtatja. <br />Tipp: Győzdjön meg róla, hogy nem kapcsolódik a hálózatra: ",
+		"statusokprotocolgood": "Rendben",
 		"statuslabelprotocolbad": "&#9888; Gondolja át!",
-		"statuslabelprotocolbad1": "A jelek szerint élő honlapról futtatja a generátort. Használható tárcák készítéséhez javasoljuk, hogy ", 
-		"statuslabelprotocolbad2": "töltse le", 
-		"statuslabelprotocolbad3": "a GitHub-on található zip állományt és futtassa a generátort offline módban, helyi html állományként.", 
-		"statusokprotocolbad": "Rendben", 
-		"statuslabelkeypool1": "Az ügymenet során készített valamennyi AXE cím és privát kulcs naplója. A lap újratöltésével új ügymenetet indíthat.", 
-		"statuskeypoolrefresh": "Frissítés", 
-		"statusokkeypool": "Rendben", 
+		"statuslabelprotocolbad1": "A jelek szerint élő honlapról futtatja a generátort. Használható tárcák készítéséhez javasoljuk, hogy ",
+		"statuslabelprotocolbad2": "töltse le",
+		"statuslabelprotocolbad3": "a GitHub-on található zip állományt és futtassa a generátort offline módban, helyi html állományként.",
+		"statusokprotocolbad": "Rendben",
+		"statuslabelkeypool1": "Az ügymenet során készített valamennyi AXE cím és privát kulcs naplója. A lap újratöltésével új ügymenetet indíthat.",
+		"statuskeypoolrefresh": "Frissítés",
+		"statusokkeypool": "Rendben",
 
 		// single wallet html
 		"newaddress": "Új cím előállítása",
@@ -8787,8 +8787,8 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>A AXE pénztárca</b> nem más, mint egy AXE címből és a hozzá tartozó privát kulcsból álló számpár. Egy ilyen pénztárcát állítottunk elő és jelenítettünk meg fent az Ön számára a Web böngészőben.",
 		"singletip2": "<b>A pénztárca biztonságos megőrzése</b> érdekében nyomtassa ki vagy más módon rögzítse a AXE címet és privát kulcsot. Fontos, hogy a privát kulcsból készítsen másolatot, és tárolja biztonságos helyen. Ez a webhely nem tárol az ön privát kulcsaival kapcsolatos információt. Ha ismeri a PGP-t, akkor egyben letöltheti az egész honlapot, és ellenőrizheti, hogy a webhely szerzője álatal írt valódi változatot töltötte-e le. Ehhez össze kell hasonlítania a HTML-ből képzett SHA256 zanzát a webhely láblécében hivatkozott, digitálisan aláírt verzió történetben lévő SHA256 zanzával. Amennyiben elhagyja vagy frissíti a webhelyet illetve megnyomja az 'Új cím előállítása' gombot, akkor új privát kulcs készül és az előzőleg megjelenített privát kulcs elvész. A AXE címhez tartozó privát kulcsot titokban kell tartani. Bárki, aki megszerzi ezt a kulcsot, el tudja költeni a címhez tartozó valamennyi . Ha kinyomtatja a pénztárcát, akkor tárolja egy villámzáras vízhatlan nejlonzacskóban. A papírtárcát kezelje úgy, mintha pénz lenne.",
 		"singletip3": "<b>Pénzt úgy tehet</b> a pénztárcájába, hogy másokkal AXEokat küldet erre a AXE címre.",
-		"singletip4": "<b>A pénztárca egyenlegét</b> úgy kérdezheti le, hogy elmegy a explorer.axe.org weblapokra, és ott begépeli ezt a AXE címet.",
-		"singletip5": "<b>Ha el akarja költeni a AXEjait,</b> akkor menjen a explorer.axe.org weblapra, és a privát kulcson lévő teljes egyenleget töltse át (sweep) a weblapon lévő számlájára. A pénzt úgy is elköltheti, hogy letölti valamelyik népszerű p2p AXE klienst, és beimportálja a privát kulcsot a p2p kliens pénztárcájába. Ne feledje, hogy miután beimportálta a kulcsot a p2p AXE kliensbe, a kulcsot a p2p kliens a pénztárcában lévő többi kulccsal együtt tárolja. Pénz küldésekor a visszajáró pénzt a p2p kliens pénztárcájában lévő másik AXE címre fogják küldeni. Ekkor biztonsági másolatot kell készítenie a p2p kliens pénztárcáról, és a másolatot biztos helyen kell őriznie, mivel a maradék AXEjait a pénztárca kulcsai tárolják. Satoshi tanácsa, hogy pénztárcát soha ne töröljünk.",
+		"singletip4": "<b>A pénztárca egyenlegét</b> úgy kérdezheti le, hogy elmegy a insight.axecore.net weblapokra, és ott begépeli ezt a AXE címet.",
+		"singletip5": "<b>Ha el akarja költeni a AXEjait,</b> akkor menjen a insight.axecore.net weblapra, és a privát kulcson lévő teljes egyenleget töltse át (sweep) a weblapon lévő számlájára. A pénzt úgy is elköltheti, hogy letölti valamelyik népszerű p2p AXE klienst, és beimportálja a privát kulcsot a p2p kliens pénztárcájába. Ne feledje, hogy miután beimportálta a kulcsot a p2p AXE kliensbe, a kulcsot a p2p kliens a pénztárcában lévő többi kulccsal együtt tárolja. Pénz küldésekor a visszajáró pénzt a p2p kliens pénztárcájában lévő másik AXE címre fogják küldeni. Ekkor biztonsági másolatot kell készítenie a p2p kliens pénztárcáról, és a másolatot biztos helyen kell őriznie, mivel a maradék AXEjait a pénztárca kulcsai tárolják. Satoshi tanácsa, hogy pénztárcát soha ne töröljünk.",
 
 		// paper wallet html
 		"paperlabelhideart": "A grafika elrejtése?",
@@ -8813,7 +8813,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "A Tömeges pénztárcával állítson elő nagy mennyiségű (10,000+) AXE címet. Másolja át a vesszővel elválasztott adatokat (CSV) egy biztonságos szöveges állományba a számítógépére. A szöveges állományról készítsen mentést, és azt őrizze biztonságos környezetben.",
 		"bulklabela2li2": "Importálja be a AXE címeket a web szerverén futó adatbázisba. (A pénztárca privát kulcsait ne importája be, mert ezzel azt kockáztatja, hogy a hackerek ellopják a pénzét. Csak a AXE címeket importálja be, úgy, ahogy azt a ügyfelei látják majd.)",
 		"bulklabela2li3": "Web helyének vásárlókosarába vegye fel a AXE történő fizetés lehetőségét. Ha egy ügyfél AXE kíván fizetni, akkor \"fizetési címként\" az adatbázis egyik címét jelenítse meg, és a megrendelés mellett ezt a címet tárolja.",
-		"bulklabela2li4": "Most szüksége van arra, hogy értesítést kapjon, ha megérkezett a pénz. A Google-on keressen rá a \"AXE payment notification\" kifejezésre, és iratkozzon föl valamelyik szolgáltatóhoz, amely értesítést küld, ha bizonyos címekre AXE küldtek. Számos ilyen szolgáltató van, amelyik Web szervíz, API, SMS, Email, stb. segítségével értesítést küld. Amint megérkezik az értesítés, amelynek automatikus figyelése beprogramozható, máris megkezdheti az ügyfél megrendelésének feldolgozását. Ha manuálisan szeretné ellenőrizni, hogy érkezett-e valamelyik címre pénz, akkor a Block Explorer-t használhatja. A CÍM helyébe írja azt a AXE címet, amelyet ellenőrizni szeretne. A tranzakció megerősítéséhez 10 és 60 perc közötti időre van szükség.<br />http://explorer.axe.org/address/CÍM<br /><br />A megerősítetlen tranzakciókat itt lehet megnézni: https://bchain.info/AXE/ or http://insight.axe.siampm.com/ <br />A tranzakció 30 másodpercen belül megjelenik.",
+		"bulklabela2li4": "Most szüksége van arra, hogy értesítést kapjon, ha megérkezett a pénz. A Google-on keressen rá a \"AXE payment notification\" kifejezésre, és iratkozzon föl valamelyik szolgáltatóhoz, amely értesítést küld, ha bizonyos címekre AXE küldtek. Számos ilyen szolgáltató van, amelyik Web szervíz, API, SMS, Email, stb. segítségével értesítést küld. Amint megérkezik az értesítés, amelynek automatikus figyelése beprogramozható, máris megkezdheti az ügyfél megrendelésének feldolgozását. Ha manuálisan szeretné ellenőrizni, hogy érkezett-e valamelyik címre pénz, akkor a Block Explorer-t használhatja. A CÍM helyébe írja azt a AXE címet, amelyet ellenőrizni szeretne. A tranzakció megerősítéséhez 10 és 60 perc közötti időre van szükség.<br />http://insight.axerunners.com/address/CÍM<br /><br />A megerősítetlen tranzakciókat itt lehet megnézni: https://bchain.info/AXE/ or http://insight.axe.siampm.com/ <br />A tranzakció 30 másodpercen belül megjelenik.",
 		"bulklabela2li5": "Az Ön AXE biztonságos módon gyűlnek a blokkláncon. Használja az 1. lépés során előállított eredeti pénztárcát, ha szeretné őket elkölteni.",
 
 		// brain wallet html
@@ -8874,7 +8874,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"detaillabelprivmini": "Mini formátumú Privát Kulcs (22, 26 vagy 30 karakter, amely egy 'S'-sel kezdődik):",
 		"detaillabelpassphrase": "BIP38 jelmondat",
 		"detailbip38decryptbutton": "BIP38 dekódolás",
-		"detailbip38encryptbutton": "BIP38 titkosítás", 
+		"detailbip38encryptbutton": "BIP38 titkosítás",
 		"detaillabelq1": "Hogyan lehet dobókockával pénztárcát készíteni? Mit jelent a B6 formátum?",
 		"detaila1": "A AXE pénztárca előállításakor nagyon fontos, hogy a felhasznált véletlen számok valóban véletlenek legyenek. A fizikai véletlen jobb, mint a számítógéppel előállított pszeudo-véletlen. Fizikai véletlen a legegyszerűbben egy dobókockával állítható elő. Ha szeretne egy AXE privát címet előállítani, akkor csupán egy dobókockára van szüksége, mellyel 99-szer kell dobni. Jegyezze fel minden egyes dobása eredményét. Az eredmények feljegyzésekor a következő szabályokat kövesse: 1->1, 2->2, 3->3, 4->4, 5->5, 6->0. Ha így tesz, akkor a privát kulcshoz tartozó véletlen számot B6 formátumban, vagyis 6-os számrendszerben rögzíti. Írja be ezt a 99 karakterből álló 6-os számrendszerbeli privát kulcsot a fenti szövegmezőbe, majd nyomja meg a 'Részletek megjelenítése' gombot. Ekkor megjelenik az a AXE cím, amely ehhez a privát kulcshoz tartozik. Érdemes felírni a WIF formátumú privát kulcsot is, mivel ezt szélesebb körben használják."
 	};
@@ -8958,7 +8958,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>Un portafogli AXE</b> è composto semplicemente da una coppia di valori: l'indirizzo e la sua chiave privata. Un portafogli è stato appena generato sul tuo browser e mostrato sopra.",
 		"singletip2": "<b>Per mettere in sicurezza questo portafogli</b> devi stampare o quantomeno salvare l'indirizzo AXE e la Chiave privata. È molto importante fare una copia di backup della chiave privata e conservarla in un posto sicuro. Questo sito non conosce la tua chiave privata. Se hai familiarità con PGP, puoi scaricare per intero questa pagina HTML e controllare la sua autentiticità. Puoi confrontare il codice SHA256 della pagina scaricata con il codice firmato dall'autore che trovi nella cronologia delle versioni (in fondo alla pagina). Se abbandoni/aggiorni la pagina web oppure premi il tasto Genera, un nuovo indirizzo sostituirà quello vecchio che non potrà più essere recuperato. La chiave privata dovrebbe essere tenuta segreta, chiunque conosca la chiave privata può avere accesso e spendere i tuoi AXE. Se stampi il tuo portafogli conservalo in una busta di plastica sigillata per tenerla al riparo dall'acqua. Tratta quanto stampato alla stregua di una banconota.",
 		"singletip3": "<b>Ricevi fondi</b> su questo portafogli mostrando l'indirizzo AXE per il versamento.",
-		"singletip4": "<b>Controlla il saldo</b> visitando explorer.axe.org cercando il tuo indirizzo AXE.",
+		"singletip4": "<b>Controlla il saldo</b> visitando insight.axecore.net cercando il tuo indirizzo AXE.",
 		"singletip5": "<b>Spendi i tuoi AXE</b> importando in esso il portafogli. Tieni presente che quando importi una chiave nel client p2p, nel momento in cui spendi le monete, la chiave viene raggruppata insieme alle altre presenti nel programma con i restanti AXE. Quando esegui una transazione gli spiccioli verranno invitati verso un altro indirizzo all'interno del tuo portafogli gestito dal client p2p. Quindi dovresti tenere un backup del portafogli contenuto nel client p2p e tenere questo in un posto sicuro fin tanto terrai dei AXE lì. Satoshi consiglia di non cancellare mai un portafogli.",
 		"singleshare": "SHARE", //TODO: please translate
 		"singlesecret": "SECRET", //TODO: please translate
@@ -8986,7 +8986,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "Usa la funzione \"Portafogli multipli\" per generare una grande quantità di indirizzi AXE (10,000+). Copia e incolla la lista generata in formato CSV (campi separati da virgola) su un file, al sicuro nel tuo computer. Fai una copia di backup di questo file e mettilo un posto sicuro.",
 		"bulklabela2li2": "Importa gli indirizzi AXE in una tabella del database sul tuo web server. (Non importare i portafogli/chiavi private sul web server, altrimenti corri il rischio che rubino i tuoi AXE con l'hacking. Usa gli indirizzi AXE così come verranno mostrati ai tuoi clienti.)",
 		"bulklabela2li3": "Fornisci una opzione nel carrello del tuo sito web per pagare in AXE. Quando il cliente sceglie di pagare in AXE, gli mostrerai un indirizzo dal tuo database come \"indirizzo di pagamento\" e conserverai questo stesso indirizzo insieme ai dati dell'ordine.",
-		"bulklabela2li4": "Ora hai bisogno di notificare l'arrivo del pagamento. Cerca su Google \"notifiche pagamento AXE\" ed iscriviti ad almeno un servizio di notifica. Esistono diversi servizi che possono notificare in vari modi come Web Services, API, SMS, Email, etc. Una volta ricevuta la notifica, la quale può essere automatizzata con la programmazione, puoi processare l'ordine del cliente. Per verificare manualmente se l'ordine è davvero arrivato puoi usare un block explorer. Sostituisci INDIRIZZODACONTROLLARE con l'indirizzo AXE da controllare. Possono volerci dai 10 fino a 60 minuti per fare in modo che una transazione venga confermata.<br>http://explorer.axe.org/address/INDIRIZZODACONTROLLARE<br><br>Le transazioni non confermate possono essere visionate su: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br>Dovresti vedere la transazione entro 30 secondi.",
+		"bulklabela2li4": "Ora hai bisogno di notificare l'arrivo del pagamento. Cerca su Google \"notifiche pagamento AXE\" ed iscriviti ad almeno un servizio di notifica. Esistono diversi servizi che possono notificare in vari modi come Web Services, API, SMS, Email, etc. Una volta ricevuta la notifica, la quale può essere automatizzata con la programmazione, puoi processare l'ordine del cliente. Per verificare manualmente se l'ordine è davvero arrivato puoi usare un block explorer. Sostituisci INDIRIZZODACONTROLLARE con l'indirizzo AXE da controllare. Possono volerci dai 10 fino a 60 minuti per fare in modo che una transazione venga confermata.<br>http://insight.axerunners.com/address/INDIRIZZODACONTROLLARE<br><br>Le transazioni non confermate possono essere visionate su: https://bchain.info/AXE/ http://insight.axe.siampm.com/ <br>Dovresti vedere la transazione entro 30 secondi.",
 		"bulklabela2li5": "In questo modo i AXE transiteranno nella blockchain in tutta sicurezza. Usa il portafogli creato nel Passo 1 per spendere i AXE.",
 
 		// brain wallet html
@@ -9123,7 +9123,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>AXEウォレットとは</b> AXEのアドレスと対応するプライベートキーを組み合わせたものです。新しいアドレスがブラウザー上で生成され、上記に表示されています。",
 		"singletip2": "<b>このウォレットを守るためには</b> AXEアドレスとAXEプライベートキーを印刷するなどの手段で記録しなければいけません。プライベートキーが無いとペアになっているアドレスに送られたAXEが使えないので、人に晒されないような方法でプライベートキーのコピーを取り、大事に保管して下さい。このサイトはこのプライベートキーの保存はしません。PGPをご存知の方は、このサイトを1つのhtmlファイルで落とすことができるので、このサイトのhtmlファイルのSHA256ハッシュとサイトのフッターにデジタル署名されたメッセージに入ったハッシュを比べて不正にいじられていないかをお確かめいただけます。このページを閉じたり、離れたり、”新アドレス生成”を押すと現在表示されているプライベートキーは消え、新規アドレスが生成されるので、ご使用の場合は必ず何らかの手段で記録しておいて下さい。プライベートキーは秘密にしてください。共有されますと、対応するAXEアドレスに存在するコインが全て共有者間で利用可能となります。ウォレット情報を印刷したら、濡れないようにジップロックに入れましょう。紙幣と同様に扱うよう心がけてください。",
 		"singletip3": "<b>このウォレットにコインを追加 : </b> 他の人から自分のAXEアドレスに送ってもらう。",
-		"singletip4": "<b>残高照会は</b> explorer.axe.orgに行き、AXEアドレスを入力してお調べ下さい。",
+		"singletip4": "<b>残高照会は</b> insight.axecore.netに行き、AXEアドレスを入力してお調べ下さい。",
 		"singletip5": "<b>AXEを使おう。</b> 送金するには、このページで生成したプライベートキーをパソコン・スマホ端末にあるウォレットアプリなどに取り込んで使えます。しかし、その時点でそのアドレスが取り込んだウォレットの他のアドレスと融合してしまい、この一つのアドレスのバックアップだけじゃビットコインを保管することはできなくなります。取り込み先のウォレットを強いパスワードで暗号化し、バックアップして、安全に扱って下さい。ビットコインの考案者「サトシさん」曰く、「一度作ったウォレットを、空にしたとしても、削除しない方が良い。」(メールアドレスと同じく、いつ昔の友達や親戚から古いアドレス宛にビットコインを送ってくるかわかりませんから。)",
 
 		// paper wallet html
@@ -9149,7 +9149,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "大量生成タブで大量のAXEを生成(10,000+でも可)。出てくるCSVテキストをコピーして、安全なテキストエディターで貼り付けて、安全な場所に保存しておいて下さい。一つバックアップを取り、別の場所で保管しておく(強いパスワードのかかったzipなどで)",
 		"bulklabela2li2": "AXEアドレスをウェブサーバーにアップロード。プライベートキーはアップロードしないで下さい。ユーザーに見せたい宛先用のアドレスのみをアップロードして下さい。",
 		"bulklabela2li3": "サイトのショッピングカート機能にAXEのリンクを追加して下さい。クリックされた時、お値段と先ほどアップしたAXEアドレスが順番に出てくるようにしておいて下さい(1取引1アドレス)。注文の情報と一緒に、このアドレスも一緒に保存して、後で紐付けられるようにしておいて下さい。",
-		"bulklabela2li4": "接下来你需要一个收款通知，联系相关服务的供应商（谷歌搜索“AXE payment notification”），它们可以监视指定地址的资金变动，并通过WebAPI、短信、电邮或者其他方式来提醒你，你也可以通过编程使一切自动化。在http://explorer.axe.org/address/地址 或者 https://bchain.info/AXE/ http://insight.axe.siampm.com/ 查看交易确认。通常情况下，你能够在30秒之内看见交易，而根据你对安全的要求不同，你可能需要10分钟到1小时的时间等待交易确认。",
+		"bulklabela2li4": "接下来你需要一个收款通知，联系相关服务的供应商（谷歌搜索“AXE payment notification”），它们可以监视指定地址的资金变动，并通过WebAPI、短信、电邮或者其他方式来提醒你，你也可以通过编程使一切自动化。在http://insight.axerunners.com/address/地址 或者 https://bchain.info/AXE/ http://insight.axe.siampm.com/ 查看交易确认。通常情况下，你能够在30秒之内看见交易，而根据你对安全的要求不同，你可能需要10分钟到1小时的时间等待交易确认。",
 		"bulklabela2li5": "送られたAXEはブロックチェーンにて安全に保管されます。送金するには1番で作成したウォレットを何らかのAXEソフトに取り込んでご利用下さい。",
 
 		// brain wallet html
@@ -9264,26 +9264,26 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		// status html
 		"statuslabelcryptogood": "&#10004; Boa!",
 		"statuslabelcryptogood1": "Your browser can generate cryptographically random keys using window.crypto.getRandomValues", //TODO: please translate
-		"statusokcryptogood": "OK", 
-		"statuslabelcryptobad": "&times; Oh não!", 
+		"statusokcryptogood": "OK",
+		"statuslabelcryptobad": "&times; Oh não!",
 		"statuslabelcryptobad1": "Your browser does NOT support window.crypto.getRandomValues. You should use a more modern browser with this generator to increase the security of the keys generated.",
-		"statusokcryptobad": "OK", 
+		"statusokcryptobad": "OK",
 		"statuslabelunittestsgood": "&#10004; Boa!",
 		"statuslabelunittestsgood1": "All synchronous unit tests passed.", //TODO: please translate
 		"statusokunittestsgood": "OK",
-		"statuslabelunittestsbad": "&times; Oh não!", 
+		"statuslabelunittestsbad": "&times; Oh não!",
 		"statuslabelunittestsbad1": "Some synchronous unit tests DID NOT pass. You should find another browser to use with this generator.", //TODO: please translate
-		"statusokunittestsbad": "OK", 
-		"statuslabelprotocolgood": "&#10004; Boa!", 
+		"statusokunittestsbad": "OK",
+		"statuslabelprotocolgood": "&#10004; Boa!",
 		"statuslabelprotocolgood1": "You are running this generator from your local computer. <br />Tip: Double check you are offline by trying ", //TODO: please translate
-		"statusokprotocolgood": "OK", 
-		"statuslabelprotocolbad": "&#9888; Pense duas vezes!", 
+		"statusokprotocolgood": "OK",
+		"statuslabelprotocolbad": "&#9888; Pense duas vezes!",
 		"statuslabelprotocolbad1": "You appear to be running this generator online from a live website. For valuable wallets it is recommended to", //TODO: please translate
-		"statuslabelprotocolbad2": "download", 
+		"statuslabelprotocolbad2": "download",
 		"statuslabelprotocolbad3": "the zip file from GitHub and run this generator offline as a local html file.", //TODO: please translate
-		"statusokprotocolbad": "OK", 
+		"statusokprotocolbad": "OK",
 		"statuslabelkeypool1": "This is a log of all the AXE Addresses and Private Keys you generated during your current session. Reloading the page will create a new session.", //TODO: please translate
-		"statuskeypoolrefresh": "Atualizar", 
+		"statuskeypoolrefresh": "Atualizar",
 		"statusokkeypool": "OK",
 
 		// single wallet html
@@ -9294,10 +9294,10 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>Uma carteira AXE</b> nada mais é do que um endereço AXE e a sua chave privada AXE correspondente. Essa carteira foi gerada para você em seu navegador web e está sendo exibida acima.",
 		"singletip2": "<b>Para proteger essa carteira</b> você deve imprimir ou anotar/salvar o endereço AXE e a sua chave privada correspondente. É importante que você faça uma cópia de segurança da sua chave privada e armazene-a em um local seguro. Esse site não toma conhecimento da sua chave privada. Se você for familiar com criptografia PGP, você pode baixar essa página HTML em um arquivo único e verificar se você tem uma versão autêntica do autor deste site ao fazer a correspondência do hash SHA256 deste HTML com o hash SHA256 disponível na versão assinada do arquivo contido no link no rodapé deste site. Se você sair/atualizar essa página ou apertar o botão Gerar Novo Endereço, então uma nova chave privada será gerada e a chave exibida anteriormente não será recuperável.	A sua chave privada AXE deve ser mantida em um segredo. Qualquer pessoa que tiver acesso a ela poderá gastar todos os seus  associados com aquele endereço. Se você imprimir sua carteira, armazene-a em um saco plástico selado para mantê-la longe da água. Trate sua carteira em papel como se fosse dinheiro.",
 		"singletip3": "<b>Adicione fundos</b> para essa carteira ao indicar para outras pessoas enviarem AXE para o seu endereço AXE.",
-		"singletip4": "<b>Verifique seu saldo</b> visitando o site explorer.axe.org e digitando o seu endereço AXE.",
-		"singletip5": "<b>Gaste seus AXE</b> visitando o site explorer.axe.org e esvaziando completamente o seu saldo de sua chave privada para sua conta no site. Você também pode gastar seus fundos ao baixar um cliente AXE p2p popular e importar sua chave privada para a carteira do aplicativo. Tenha em mente que quando você importa uma chave única para um cliente AXE p2p e gasta seus fundos, sua chave será agrupada com outras chavfes privadas no aplicativo de carteira. Quando você realizar uma transação o seu troco será enviado para outro endereço AXE dentro do seu aplicativo de carteira. Você deve então fazer backup da sua carteira em seu aplicativo e mantê-la em segurança, visto que seus AXE remanescentes agora serão armazenados nela. Um conselho do Satoshi Nakamoto é de que uma carteira nunca deve ser apagada.",
-		"singleshare": "COMPARTILHE", 
-		"singlesecret": "SECRETA", 
+		"singletip4": "<b>Verifique seu saldo</b> visitando o site insight.axecore.net e digitando o seu endereço AXE.",
+		"singletip5": "<b>Gaste seus AXE</b> visitando o site insight.axecore.net e esvaziando completamente o seu saldo de sua chave privada para sua conta no site. Você também pode gastar seus fundos ao baixar um cliente AXE p2p popular e importar sua chave privada para a carteira do aplicativo. Tenha em mente que quando você importa uma chave única para um cliente AXE p2p e gasta seus fundos, sua chave será agrupada com outras chavfes privadas no aplicativo de carteira. Quando você realizar uma transação o seu troco será enviado para outro endereço AXE dentro do seu aplicativo de carteira. Você deve então fazer backup da sua carteira em seu aplicativo e mantê-la em segurança, visto que seus AXE remanescentes agora serão armazenados nela. Um conselho do Satoshi Nakamoto é de que uma carteira nunca deve ser apagada.",
+		"singleshare": "COMPARTILHE",
+		"singlesecret": "SECRETA",
 
 		// paper wallet html
 		"paperlabelhideart": "Ocultar figura",
@@ -9322,7 +9322,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "Usa el tab \"Direcciones en masa\" para generar por anticipado muchas direcciones (más de 10000). Copia y pega la lista de valores separados por comas (CSV) a un archivo de texto seguro (cifrado) en tu ordenador. Guarda una copia de seguridad en algún lugar seguro.",
 		"bulklabela2li2": "Importa las direcciones en la base de datos de tu servidor. No subas la cartera ni las claves públicas, o de lo contrario te lo pueden robar. Sube sólo las direcciones, ya que es lo que se va a mostrar a los clientes.",
 		"bulklabela2li3": "Ofrece una alternativa en el carro de la compra de tu web para que los clientes paguen con AXE. Cuando el cliente elija pagar con AXE, les muestras una de las direcciones de la base de datos como su \"dirección de pago\" y guardas esto junto con el pedido.",
-		"bulklabela2li4": "Ahora te hace falta recibir una notificación del pago. Busca en google \"notificación de pagos AXE\" (o \"AXE payment notification\" en inglés) y suscríbete a alguno de los servicios que aparezcan. Hay varios de ellos, que te pueden notificar vía Web services, API, SMS, email, etc. Una vez te llegue la notificación, lo cual puede ser automatizado, entonces ya puedes procesar el pedido. Para comprobar a mano si has recibido un pago, puedes usar Block Explorer: reemplaza DIRECCION a continuación por la dirección que estés comprobando. La transacción puede tardar entre 10 minutos y una hora en ser confirmada. <br />http://explorer.axe.org/address/DIRECCION<br /><br />Puedes ver las transacciones sin confirmar en: https://bchain.info/AXE/ http://insight.axe.siampm.com <br />Las transacciones sin confirmar suelen aparecer ahí en unos 30 segundos.",
+		"bulklabela2li4": "Ahora te hace falta recibir una notificación del pago. Busca en google \"notificación de pagos AXE\" (o \"AXE payment notification\" en inglés) y suscríbete a alguno de los servicios que aparezcan. Hay varios de ellos, que te pueden notificar vía Web services, API, SMS, email, etc. Una vez te llegue la notificación, lo cual puede ser automatizado, entonces ya puedes procesar el pedido. Para comprobar a mano si has recibido un pago, puedes usar Block Explorer: reemplaza DIRECCION a continuación por la dirección que estés comprobando. La transacción puede tardar entre 10 minutos y una hora en ser confirmada. <br />http://insight.axerunners.com/address/DIRECCION<br /><br />Puedes ver las transacciones sin confirmar en: https://bchain.info/AXE/ http://insight.axe.siampm.com <br />Las transacciones sin confirmar suelen aparecer ahí en unos 30 segundos.",
 		"bulklabela2li5": "Las AXE que recibas se almacenarán de forma segura en la cadena de bloques. Usa la cartera original que generaste en el paso 1 para usarlas.",
 
 		// brain wallet html
@@ -9376,7 +9376,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"detaillabelprivmini": "Chave privada en formato mini (22, 26 ou 30 caracteres, inicia com 'S'):",
 		"detaillabelpassphrase": "Senha BIP38",
 		"detailbip38decryptbutton": "Descriptografar BIP38",
-		"detailbip38encryptbutton": "Criptografar em BIP38", 
+		"detailbip38encryptbutton": "Criptografar em BIP38",
 		"detaillabelq1": "Como eu faço uma carteira usando um dado? O que é o formato B6?",
 		"detaila1": "Uma parte importante ao criar um carteira AXE é se assegurar que os números aleatórios usados para criar a carteira sejam realmente aleatórios. A aleatoriedade física é melhor do que a pseudo-aleatoriedade gerada por computador. A maneira mais fácil de gerar aleatoriedade física é com dados. Para criar um chave privada AXE você precisa de apenas um dado de seis lados, o qual você jogará 99 vezes. A cada jogada, anote o valor do dado. Ao anotar os valores, siga as seguintes regras: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. Ao fazer isso, você está anotando esse grande número aleatório, sua chave privada, no formato base 6 (B6). Você pode então digitar essa chave privada em base 6 contendo 99 caracteres no campo de texto acima e clicar em Ver Detalhes. Você então verá o endereço AXE associado com sua chave privada. Você deve também anotar sua chave privada no formato WIF, já que ele é mais amplamente utilizado."
 	};
@@ -9460,7 +9460,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>AXE кошелек</b> это простая пара идентификаторов, состоящая из адреса AXE кошелька и соответствующего ему приватного ключа. Такой колшелек был сгенерирован для Вас в Вашем браузере и отображен выше.",
 		"singletip2": "<b>Для обеспечения сохранности этого кошелька</b> Вам необходимо распечатать или каким-либо другим спобом записать AXE адрес и приватный ключ. Очень важно иметь запасную копию приватного ключа и хранить ее в безопасном месте. Этот сайт не хранит информацию о Вашем ключе. Если Вы имеете опыт работы с PGP, то Вы можете сохранить эту HTML страницу в формате архива и проверить то, что Вы используете подлинную версию страницы от автора сайта, сравнив SHA256 хэш этой HTML страницы с SHA256 хэшем указанным истории версий данной страницы, которая подписана ключем автора сайта. Данную ифнормацию можно найти внизу страницы. Если Вы покинете или обновите страницу с сайтом или нажмете кнопку 'Сгенерировать новый адрес', то будет сгенерирован новый приватный ключ и предыдущий приватный ключ восстановить будет невозможно. Ваш приватный ключ AXE кошелька должен храниться в секрете. С кем бы Вы не поделились информацией о приватном ключе - он будет иметь возможность потратить AXE кошелька с этим адресом. Если вы распечатали приватный ключ - необходимо обеспечить его сохранность в месте, недоступном для воды. Обращайтесь с бумажным кошельком для AXE как с наличными деньгами.",
 		"singletip3": "<b>Пополните кошелек</b> сообщив другим свой AXE адрес.",
-		"singletip4": "<b>Проверить баланс кошелька</b> можно на сайте explorer.axe.org по адресу AXE кошелька.",
+		"singletip4": "<b>Проверить баланс кошелька</b> можно на сайте insight.axecore.net по адресу AXE кошелька.",
 		"singletip5": "<b>Потратить Ваши AXE</b> можно на загрузив один из наиболее популярных AXE p2p-клиентов и выполнив импорт Вашего приватного ключа. Необходимо учесть, что когда Вы импортируете свой один приватный ключ в программу-клиент и тратите AXE - Ваш ключ будет смешан с другими приватными ключами в программе-клиенте. При выполнении транзакции по расходу или получению средств, сдача будет перенаправлена на другой AXE адрес программного кошелька. После выполнения транзации необходимо сделать резервную копию Вашего программного кошелька и сохранить ее в надежном месте, так как на нем будут сожержаться оставшиеся средства. Сатоши рекомендовал никогда не удалять кошелек.",
 		"singleshare": "Поделиться",
 		"singlesecret": "Хранить в секрете",
@@ -9487,7 +9487,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "Используйте вкладку 'Несколько кошельков', для того чтобы сгенерировать большое количество адресов AXE (10.000+). Скопируйте и вставьте сгенерированные идентификаторы в виде списка (в формате CSV) в секретный файл на вашем компьютере. Сделайте резервную копию созданного файла и сохраните ее в надежном месте. ",
 		"bulklabela2li2": "Импортируйте AXE адреса в базу данных или иное хранилище Вашего веб-сервера. (Не размещайте приватные ключи кошелька на Вашем веб-сервере, в противном случае Вы рискуете потерять свои AXE. Своим клиентам Вам достаточно предоставить AXE адрес.)",
 		"bulklabela2li3": "Добавьте опцию для оплаты заказа из корзины Вашего клиента для оплаты AXE. Если клиент выбирает оплату AXE - предоставьте ему информацию о AXE адресе для приема оплаты, который будет закреплен за этим клиентом и сохраните соответствующим образом заказ.",
-		"bulklabela2li4": "Вам необходимо получать информацию о получении оплаты. Загуглите 'нотификации об оплате AXE' и подпишитесь на какой-нибудь сервис нотификаций. В интернете можно найти множество сервисов для получения нотификаций через веб-сервисы, api, смс, электронную почту и т.д. Как только Вы получите нотификацию об оплате, которую можно обрабатывать в автоматическом режиме, Вы можете приступить к подготовке заказа для Вашего клиента. Чтобы вручную проверить статус оплаты воспользуйтесь сервисом Block Explorer. Замените АДРЕС на адрес AXE, который Вы хотите проверить. Подтверждение транзакции оплаты может занимать от 10 минут до одного часа. http://explorer.axe.org/address/АДРЕС\n\nНеподтвержденные транзации оплаты можно посмотреть на: https://bchain.info/AXE/ http://insight.axe.siampm.com/\nНеподтвержденная транзакция будет отображаться через 30 секунд.",
+		"bulklabela2li4": "Вам необходимо получать информацию о получении оплаты. Загуглите 'нотификации об оплате AXE' и подпишитесь на какой-нибудь сервис нотификаций. В интернете можно найти множество сервисов для получения нотификаций через веб-сервисы, api, смс, электронную почту и т.д. Как только Вы получите нотификацию об оплате, которую можно обрабатывать в автоматическом режиме, Вы можете приступить к подготовке заказа для Вашего клиента. Чтобы вручную проверить статус оплаты воспользуйтесь сервисом Block Explorer. Замените АДРЕС на адрес AXE, который Вы хотите проверить. Подтверждение транзакции оплаты может занимать от 10 минут до одного часа. http://insight.axerunners.com/address/АДРЕС\n\nНеподтвержденные транзации оплаты можно посмотреть на: https://bchain.info/AXE/ http://insight.axe.siampm.com/\nНеподтвержденная транзакция будет отображаться через 30 секунд.",
 		"bulklabela2li5": "AXE накапливаются в цепочке блоков. Используйте оригинальный файл сгенерированный на 1 шаге, чтобы потратить их.",
 
 		// brain wallet html
@@ -9624,7 +9624,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"singletip1": "<b>比特币钱包</b>就是这么简单，一个地址，对应一个私钥，浏览器已自动生成了一个，就显示在上面。私钥必须保密，地址可以公开。",
 		"singletip2": "<b>妥善保管你的钱包</b> 为了保护你的钱包，建议你用打印或者其他方式来保管你的私钥和地址。把你的私钥备份保存在安全、保密的位置是必要的。本站不提供私钥的相关知识，请自行学习。如果你熟悉PGP，你也可以下载这个HTML文件（它是单文件全功能的），用它的SHA256摘要和作者在本站页脚留下的相比对。本工具支持离线使用，这样它生成的私钥-地址就很难被监视了。比特币私钥必须保密，任何知道你私钥的人都可以随意花费其对应地址的比特币。你可以打印你的钱包（即纸钱包），把它装进一个防水的口袋里——就像你在保管纸币一样。",
 		"singletip3": "<b>获得比特币: </b> 让别人往你的地址汇入比特币。",
-		"singletip4": "<b>查询余额：</b> 访问explorer.axe.org可以查看到任何地址中的比特币余额。",
+		"singletip4": "<b>查询余额：</b> 访问insight.axecore.net可以查看到任何地址中的比特币余额。",
 		"singletip5": "<b>花费世币：</b> 你可以下载世币客户端，导入你的世币私钥来花费对应地址上的世币。每当你发送一笔钱之后，找零有可能会发回客户端生成的另外一个地址，记得备份客户端生成的钱包文件，否则你可能丢钱。中本聪说过，不要删除任何钱包，因为你的亲戚朋友说不定还会往你的旧地址里汇款。",
 
 		// paper wallet html
@@ -9650,7 +9650,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"bulklabela2li1": "    在批量钱包选项卡预生成大量比特币地址（比如，一万个）。把生成的逗号分隔值清单（CSV）复制到一个安全的环境中，注意备份。",
 		"bulklabela2li2": "    把地址列表导入到Web服务器上（注意，<b>不要</b>把私钥部分也一并导入，否则会有被盗的危险）",
 		"bulklabela2li3": "    为你的客户提供一个比特币支付的接口。每当一名客户选择使用比特币支付，你就从你的数据库中提取一个地址，作为该客户专用的“付款地址”，并保存订单信息。",
-		"bulklabela2li4": "接下来你需要一个收款通知，联系相关服务的供应商（谷歌搜索“AXE payment notification”），它们可以监视指定地址的资金变动，并通过WebAPI、短信、电邮或者其他方式来提醒你，你也可以通过编程使一切自动化。在http://explorer.axe.org/address/地址 或者 https://bchain.info/AXE/ http://insight.axe.siampm.com/地址 查看交易确认数。通常情况下，你能够在30秒之内看见交易，而根据你对安全的要求不同，你可能需要10分钟到1小时的时间等待交易确认。",
+		"bulklabela2li4": "接下来你需要一个收款通知，联系相关服务的供应商（谷歌搜索“AXE payment notification”），它们可以监视指定地址的资金变动，并通过WebAPI、短信、电邮或者其他方式来提醒你，你也可以通过编程使一切自动化。在http://insight.axerunners.com/address/地址 或者 https://bchain.info/AXE/ http://insight.axe.siampm.com/地址 查看交易确认数。通常情况下，你能够在30秒之内看见交易，而根据你对安全的要求不同，你可能需要10分钟到1小时的时间等待交易确认。",
 		"bulklabela2li5": "比特币在区块链上稳定之后，你就可以使用在第一步中生成的私钥来花费它们。",
 
 		// brain wallet html
@@ -10085,7 +10085,7 @@ ninja.wallets.paperwallet = {
 
 						// release thread to browser to render UI
 						setTimeout(bulk.batchCSV, 0);
-						
+
 					});
 				}
 				else {
@@ -10094,8 +10094,8 @@ ninja.wallets.paperwallet = {
 					bulk.csv.push((bulk.csvRowLimit - bulk.csvRowsRemaining + bulk.csvStartIndex)
 										+ ",\"" + key.getBitcoinAddress() + "\",\"" + key.toString("wif")
 										//+	"\",\"" + key.toString("wifcomp")    // uncomment these lines to add different private key formats to the CSV
-										//+ "\",\"" + key.getBitcoinHexFormat() 
-										//+ "\",\"" + key.toString("base64") 
+										//+ "\",\"" + key.getBitcoinHexFormat()
+										//+ "\",\"" + key.toString("base64")
 										+ "\"");
 					document.getElementById("bulktextarea").value = translator.get("bulkgeneratingaddresses") + bulk.csvRowsRemaining;
 
@@ -10261,7 +10261,7 @@ ninja.wallets.vanitywallet = {
 				privateKeyWif = ninja.translator.get("vanityprivatekeyonlyavailable");
 				var pubKeyHex = (ninja.publicKey.isPublicKeyHexFormat(input1KeyString)) ? input1KeyString : input2KeyString;
 				var ecKey = (ninja.privateKey.isPrivateKey(input1KeyString)) ? new Bitcoin.ECKey(input1KeyString) : new Bitcoin.ECKey(input2KeyString);
-				// add 
+				// add
 				if (document.getElementById("vanityradioadd").checked) {
 					var pubKeyCombined = ninja.publicKey.getByteArrayFromAdding(pubKeyHex, ecKey.getPubKeyHex());
 				}
@@ -10499,7 +10499,7 @@ ninja.wallets.vanitywallet = {
 				document.getElementById("detailprivwif").innerHTML = wif;
 				btcKey.setCompressed(true);
 				var bitcoinAddressComp = btcKey.getBitcoinAddress();
-				var wifComp = btcKey.getBitcoinWalletImportFormat();			
+				var wifComp = btcKey.getBitcoinWalletImportFormat();
 				document.getElementById("detailpubkeycomp").innerHTML = btcKey.getPubKeyHex();
 				document.getElementById("detailaddresscomp").innerHTML = bitcoinAddressComp;
 				document.getElementById("detailprivwifcomp").innerHTML = wifComp;
@@ -11220,10 +11220,10 @@ ninja.wallets.splitwallet = {
 			//   1 share in a safety deposit box ("Box")
 			//   1 share at Home
 			//   1 share at Work
-			// Threshold of 2 can be redeemed in these permutations 
-			//   Home + Box 
-			//   Work + Box 
-			//   Home + Work 
+			// Threshold of 2 can be redeemed in these permutations
+			//   Home + Box
+			//   Work + Box
+			//   Home + Work
 			testSplitAndCombinePrivateKey2of3: function () {
 				// lowercase hex key
 				var key = "0004d30da67214fa65a41a6493576944c7ea86713b14db437446c7a8df8e13da"; //5HpJ4bpHFEMWYwCidjtZHwM2rsMh4PRfmZKV8Y21i7msiUkQKUW
@@ -11267,7 +11267,7 @@ ninja.wallets.splitwallet = {
 			//   3 shares with good friend Angie
 			//   3 shares with good friend Fred
 			//   3 shares with Self at home or office
-			// Threshold of 7 can be redeemed in these permutations 
+			// Threshold of 7 can be redeemed in these permutations
 			//   Self + Box (no trust to spend your coins but your friends are backing up your shares)
 			//   Angie + Box (Angie will send btc to executor of your will)
 			//   Fred + Box (if Angie hasn't already then Fred will send btc to executor of your will)
@@ -11291,7 +11291,7 @@ ninja.wallets.splitwallet = {
 			testCombinePrivateKeyFromXofYShares: function () {
 				var key = "7rtMgwx2hwRAnAjhqYFkXY94PaQWMvFjiKhko97F1VgETt21z5r";
 				// these are 4 of 6 shares
-				var shares = ["3XxjMASmrkk6eXMM9kAJA7qiqViNVBfiwA1GQDLvg4PVScL", "3Y2DkcPuNX8VKZwpnDdxw55wJtcnCvv2nALqe8nBLViHvck", 
+				var shares = ["3XxjMASmrkk6eXMM9kAJA7qiqViNVBfiwA1GQDLvg4PVScL", "3Y2DkcPuNX8VKZwpnDdxw55wJtcnCvv2nALqe8nBLViHvck",
 					"3Y6qv7kyGwgRBKVHVbUNtzmLYAZWQtTPztPwR8wc7uf4MXR", "3YD4TowZn6jw5ss8U89vrcPHonFW4vSs9VKq8MupV5kevG4"]
 				secrets.setRNG();
 				secrets.init(7);
@@ -11313,7 +11313,7 @@ ninja.wallets.splitwallet = {
 				var btcKeyUncompressed = new Bitcoin.ECKey(keyUncompressed);
 				var btcKeyCompressed = new Bitcoin.ECKey(keyCompressed);
 				var pool = Bitcoin.KeyPool.getArray();
-				
+
 				if (pool.length != 2
 					|| pool[0].getBitcoinWalletImportFormat() != keyUncompressed
 					|| pool[1].getBitcoinWalletImportFormat() != keyCompressed
@@ -11334,7 +11334,7 @@ ninja.wallets.splitwallet = {
 				var btcKeyUncompressed2 = new Bitcoin.ECKey(keyUncompressed);
 				var btcKeyHex = new Bitcoin.ECKey(keyHex);
 				var pool = Bitcoin.KeyPool.getArray();
-				
+
 				if (pool.length != 2
 					|| pool[0].getBitcoinWalletImportFormat() != keyUncompressed
 					|| pool[1].getBitcoinWalletImportFormat() != keyCompressed
@@ -11440,7 +11440,7 @@ ninja.wallets.splitwallet = {
 				var a = new BigInteger('12345', 16);
 				var b = new BigInteger('1000000000000', 16);
 				if (b.subtract(a).toString(16) != 'fffffffedcbb') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldMultiplyNumbers: function () {
@@ -11484,7 +11484,7 @@ ninja.wallets.splitwallet = {
 				var p = new BigInteger('ffffffff00000001000000000000000000000000ffffffffffffffffffffffff', 16);
 				var a = new BigInteger('fffffffe00000003fffffffd0000000200000001fffffffe00000002ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', 16);
 				if (a.divide(p).toString(16) != 'ffffffff00000002000000000000000000000001000000000000000000000001') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldModNumbers: function () {
@@ -11501,20 +11501,20 @@ ninja.wallets.splitwallet = {
 				var p = new BigInteger('ffffffff00000001000000000000000000000000ffffffffffffffffffffffff', 16);
 				var a = new BigInteger('fffffffe00000003fffffffd0000000200000001fffffffe00000002ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', 16);
 				if (a.mod(p).toString(16) != '0') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldShiftLeftNumbers: function () {
 				if (new BigInteger('69527932928').shiftLeft(13).toString(16) != '2060602000000') return false;
 				if (new BigInteger('69527932928').shiftLeft(45).toString(16) != '206060200000000000000') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldShiftRightNumbers: function () {
 				if (new BigInteger('69527932928').shiftRight(13).toString(16) != '818180') return false;
 				if (new BigInteger('69527932928').shiftRight(17).toString(16) != '81818') return false;
 				if (new BigInteger('69527932928').shiftRight(256).toString(16) != '0') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldModInverseNumbers: function () {
@@ -11527,7 +11527,7 @@ ninja.wallets.splitwallet = {
 				var a = new BigInteger('deadbeef', 16);
 				var b = a.modInverse(p192);
 				if (a.multiply(b).mod(p192).toString(16) != '1') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldThrowOnModInverseOfZero: function () {
@@ -11547,7 +11547,7 @@ ninja.wallets.splitwallet = {
 				var p = new BigInteger('fffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f', 16);
 				var zInv = z.modInverse(p);
 				if (zInv.signum() !== 1) return false; //zInv should be positive
-				
+
 				return true;
 			},
 			testECKeyDoesntHangWithSpecificKey: function () {
@@ -11560,7 +11560,7 @@ ninja.wallets.splitwallet = {
 				return true;
 			},
 
-			// test checksum exceptions 
+			// test checksum exceptions
 			testUncompressedWifShouldFailChecksum: function () {
 				// original key: 5KjQAHniFiy18SU7eenyJ9EPYUkjrbiBPfDqw987QjT5vehVQZV   K->k
 				var key = "5kjQAHniFiy18SU7eenyJ9EPYUkjrbiBPfDqw987QjT5vehVQZV";
@@ -11581,12 +11581,12 @@ ninja.wallets.splitwallet = {
 				return true;
 
 			},
-			// test range of valid private key values for the secp256k1 curve, when specified in hex is 
+			// test range of valid private key values for the secp256k1 curve, when specified in hex is
 			// [0x1, 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364140]
 			testBigIntegerZeroShouldSetError: function () {
 				var key = "0000000000000000000000000000000000000000000000000000000000000000";
 				var btcKey = new Bitcoin.ECKey(key);
-				if (btcKey.error == null) { 
+				if (btcKey.error == null) {
 					return false;
 				}
 				return true;
