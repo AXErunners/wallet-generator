@@ -1,6 +1,6 @@
 {
   "name": "wallet-generator",
-  "version": "3.4.0-axe",
+  "version": "3.4.1-axe",
   "sha256sum": "2a7c4dc5d5fe7ec883f324f29f3e358b9f7873f41421b87225e3bdfa5612209b",
   "description": "Open Source JavaScript Client-Side AXE Wallet Generator",
   "main": "Gruntfile.js",
