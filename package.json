@@ -1,7 +1,6 @@
 {
   "name": "@axerunners/wallet-generator",
-  "version": "3.4.1",
-  "sha256sum": "2a7c4dc5d5fe7ec883f324f29f3e358b9f7873f41421b87225e3bdfa5612209b",
+  "version": "3.4.2",
   "description": "Open Source JavaScript Client-Side AXE Wallet Generator",
   "main": "Gruntfile.js",
   "devDependencies": {
@@ -22,7 +21,7 @@
   "keywords": [
     "axe address wallet generator"
   ],
-  "author": "axe",
+  "author": "AXErunners",
   "contributors": [
     {
       "name": "charlie137"
